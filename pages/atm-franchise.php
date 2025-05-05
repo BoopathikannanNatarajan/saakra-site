@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM Franchise Services in Hitech City | Saakra Enterprises Pvt Ltd</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        :root { 
+            --green: #27e25c; 
+            --dark-green: #1e7e34; 
+            --green-light: #d4edda; 
+            --animation-duration: 0.5s;
+        }
+        
+        /* Enhanced Navbar Styles */
+        .navbar { 
+            padding: 15px 0;
+            transition: all 0.3s ease;
+            background-color: var(--dark-green);
+        }
+        .navbar.scrolled {
+            padding: 8px 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            background-color: rgba(30, 126, 52, 0.95) !important;
+            backdrop-filter: blur(10px);
+        }
+        .company-name { 
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-left: 10px;
+            font-size: 1.2rem;
+            color: white;
+        }
+        .dropdown-menu-creative { 
+            padding: 15px; 
+            border: none; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+        .service-icon-circle { 
+            width: 45px; 
+            height: 45px; 
+            border-radius: 50%; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
+            transition: all var(--animation-duration) ease;
+            background-color: rgba(39, 226, 92, 0.1);
+        }
+        .nav-link {
+            position: relative;
+            transition: all var(--animation-duration) ease;
+            padding: 8px 15px !important;
+            font-weight: 500;
+            margin: 0 5px;
+            border-radius: 5px;
+            color: white !important;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: white;
+            transition: width var(--animation-duration) ease;
+        }
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: calc(100% - 30px);
+        }
+        .dropdown-item {
+            transition: all var(--animation-duration) ease;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin: 3px 0;
+        }
+        .dropdown-item:hover {
+            transform: translateX(8px);
+            background-color: rgba(39, 226, 92, 0.1);
+        }
+        .navbar-brand img {
+            transition: all var(--animation-duration) ease;
+        }
+        .navbar-brand:hover img {
+            transform: rotate(5deg) scale(1.1);
+        }
+        .header-space {
+            height: 80px; /* Adjust based on your navbar height */
+        }
+        
+        /* Loading animation */
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--dark-green);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+        .loader-circle {
+            width: 60px;
+            height: 60px;
+            border: 5px solid rgba(255,255,255,0.2);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 1s linear infinite;
+        }
+        .loader-text {
+            color: white;
+            margin-top: 20px;
+            font-size: 1.2rem;
+            font-weight: 500;
+            animation: fadeIn 1s ease infinite alternate;
+        }
+        @keyframes spin {
+            100% { transform: rotate(360deg); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes slideInDown {
+            from { transform: translateY(-100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .fade-in {
+            animation: fadeIn 1s ease forwards;
+        }
+        .slide-in-down {
+            animation: slideInDown 0.8s ease-out forwards;
+        }
+        .pulse {
+            animation: pulse 2s infinite ease-in-out;
+        }
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+        .delay-4 { animation-delay: 0.8s; }
+
+        /* ATM Page Specific Styles */
+        .atm-location-card {
+            transition: transform 0.3s;
+        }
+        .atm-location-card:hover {
+            transform: translateY(-5px);
+        }
+        .atm-feature-icon {
+            font-size: 2rem;
+            color: var(--green);
+            margin-bottom: 1rem;
+        }
+        /* Hero section image size adjustment */
+        .hero-image {
+            max-height: 400px;
+            width: auto;
+            object-fit: cover;
+        }
+        
+        .border-green {
+            border: 1px solid var(--green);
+        }
+        .bg-green {
+            background-color: var(--green);
+        }
+        .bg-light-green {
+            background-color: var(--green-light);
+        }
+        .text-green {
+            color: var(--green);
+        }
+        .btn-green { 
+            background-color: var(--green); 
+            color: white;
+            transition: all var(--animation-duration) ease;
+        }
+        .btn-green:hover { 
+            background-color: var(--dark-green); 
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .btn-outline-green { 
+            border-color: var(--green); 
+            color: var(--green);
+            transition: all var(--animation-duration) ease;
+        }
+        .btn-outline-green:hover { 
+            background-color: var(--green); 
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 767.98px) {
+            .hero-image {
+                max-height: 300px;
+            }
+            .navbar-collapse { 
+                background: rgba(30, 126, 52, 0.95); 
+                padding: 15px; 
+                border-radius: 10px; 
+                margin-top: 15px;
+                backdrop-filter: blur(10px);
+            }
+            .company-name {
+                font-size: 1rem;
+            }
+            .navbar-brand img {
+                height: 45px;
+            }
+            .nav-link {
+                padding: 8px 0 !important;
+                margin: 5px 0;
+            }
+            .nav-link::after {
+                display: none;
+            }
+            .header-space {
+                height: 70px;
+            }
+        }
+        
+        @media (max-width: 575.98px) {
+            .navbar-brand {
+                flex-direction: row;
+                align-items: center;
+            }
+            .company-name {
+                margin-top: 0;
+                margin-left: 10px;
+                font-size: 0.9rem;
+            }
+        }
+        
+        /* Improved responsive styles for services dropdown */
+        @media (max-width: 991.98px) {
+            .dropdown-menu-creative {
+                width: 100%;
+                border: none;
+                box-shadow: none;
+            }
+            .service-icon-circle {
+                width: 40px;
+                height: 40px;
+            }
+            .dropdown-item {
+                padding: 0.5rem 1rem;
+            }
+        }
+        @media (min-width: 992px) {
+            .dropdown-menu-creative {
+                width: 400px;
+                padding: 1rem;
+            }
+        }
+        
+        /* Footer */
+        footer a {
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        footer a:hover {
+            color: var(--green) !important;
+        }
+        .social-icons a {
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 35px;
+            margin-right: 10px;
+            transition: background-color 0.3s;
+        }
+        .social-icons a:hover {
+            background-color: var(--green);
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading animation -->
+    <div class="loader">
+        <div class="loader-circle"></div>
+        <div class="loader-text">Loading Saakra Enterprises</div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark-green sticky-top slide-in-down">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="../images/logo.png" alt="Saakra Enterprises" height="55" class="me-2 border border-2 border-white rounded-circle p-1 bg-white pulse">
+                <span class="company-name">Saakra Enterprises Pvt Ltd</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center fade-in delay-1" href="../index.php">
+                            <i class="fas fa-home me-2"></i>Home
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle d-flex align-items-center fade-in delay-2" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-th me-2"></i>Our Services
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-creative" aria-labelledby="servicesDropdown">
+                            <li><a class="dropdown-item d-flex align-items-center" href="oil-vendor.php">
+                                <div class="service-icon-circle me-3">
+                                    <i class="fas fa-gas-pump text-green"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-0">Indian Oil Vendor</h6>
+                                    <small class="text-muted">Reliable fuel distribution</small>
+                                </div>
+                            </a></li>
+                            <li><a class="dropdown-item d-flex align-items-center" href="tyres-trading.php">
+                                <div class="service-icon-circle me-3">
+                                    <i class="bi bi-radioactive text-green"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-0">Tyres Trading</h6>
+                                    <small class="text-muted">Premium quality tyres</small>
+                                </div>
+                            </a></li>
+                            <li><a class="dropdown-item d-flex align-items-center" href="transport.php">
+                                <div class="service-icon-circle me-3">
+                                    <i class="fas fa-truck text-green"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-0">Transport Services</h6>
+                                    <small class="text-muted">Efficient logistics</small>
+                                </div>
+                            </a></li>
+                            <li><a class="nav-link active dropdown-item d-flex align-items-center" href="atm-franchise.php">
+                                <div class="service-icon-circle me-3">
+                                    <i class="fas fa-money-bill-wave text-green"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-0">ATM Franchise</h6>
+                                    <small class="text-muted">Secure cash solutions</small>
+                                </div>
+                            </a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item d-flex align-items-center" href="ecommerce.php">
+                                <div class="service-icon-circle me-3">
+                                    <i class="fas fa-shopping-cart text-green"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-0">E-Commerce</h6>
+                                    <small class="text-muted">Online selling solutions</small>
+                                </div>
+                            </a></li>
+                            <li><a class="dropdown-item d-flex align-items-center" href="it-services.php">
+                                <div class="service-icon-circle me-3">
+                                    <i class="fas fa-laptop-code text-green"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-0">IT Services</h6>
+                                    <small class="text-muted">Tech solutions</small>
+                                </div>
+                            </a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center fade-in delay-3" href="../about.php">
+                            <i class="fas fa-info-circle me-2"></i>About Us
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center fade-in delay-4" href="../contact.php">
+                            <i class="fas fa-phone-alt me-2"></i>Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Space (to prevent content from being hidden under fixed navbar) -->
+    <div class="header-space"></div>
+
+    <!-- Our ATMs Section -->
+    <section class="py-5 bg-white" id="atm-locations">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <h2 class="text-green">Our ATM Locations in Hitech City</h2>
+                <p>Strategically placed for maximum convenience and accessibility</p>
+            </div>
+            
+            <div class="row g-4 justify-content-center">
+                <!-- ATM Location 1 -->
+                <div class="col-md-6">
+                    <div class="card atm-location-card h-100 border-green">
+                        <div class="card-body">
+                            <h3 class="text-green">Sankari RS,Tiruchengode Main Road ATM</h3>
+                            <p class="text-muted"><i class="fas fa-map-marker-alt text-green me-2"></i>Tiruchengode Main Road, Sankari,Salem</p>
+                            <div class="mb-3">
+                                <span class="badge bg-green text-white me-2">24/7 Access</span>
+                                <span class="badge bg-green text-white me-2">Cash Withdrawal</span>
+                                <span class="badge bg-green text-white">Balance Inquiry</span>
+                            </div>
+                            <p>Our flagship ATM located in the heart of Hitech City, serving thousands of IT professionals daily. Features include:</p>
+                            <ul>
+                                <li>High transaction capacity</li>
+                                <li>Biometric authentication</li>
+                                <li>Multi-bank compatibility</li>
+                                <li>Regular maintenance</li>
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <i class="fas fa-phone-volume text-green me-2"></i>
+                                    <small>Support: +91 9944111597</small>
+                                </div>
+                                <a href="https://maps.google.com" class="btn btn-sm btn-outline-green" target="_blank">
+                                    <i class="fas fa-directions me-1"></i> Directions
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- ATM Location 2 -->
+                <div class="col-md-6">
+                    <div class="card atm-location-card h-100 border-green">
+                        <div class="card-body">
+                            <h3 class="text-green">New Eddappadi Main Road,Sankari</h3>
+                            <p class="text-muted"><i class="fas fa-map-marker-alt text-green me-2"></i>Sankari,Salem</p>
+                            <div class="mb-3">
+                                <span class="badge bg-green text-white me-2">24/7 Access</span>
+                                <span class="badge bg-green text-white me-2">Cash Withdrawal</span>
+                                <span class="badge bg-green text-white">Mini Statements</span>
+                            </div>
+                            <p>Our premium ATM serving the Financial District area with advanced features including:</p>
+                            <ul>
+                                <li>Contactless card support</li>
+                                <li>Higher cash withdrawal limits</li>
+                                <li>Multi-language interface</li>
+                                <li>Enhanced security monitoring</li>
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <i class="fas fa-phone-volume text-green me-2"></i>
+                                    <small>Support: +91 9944111597</small>
+                                </div>
+                                <a href="https://maps.google.com" class="btn btn-sm btn-outline-green" target="_blank">
+                                    <i class="fas fa-directions me-1"></i> Directions
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ATM Features -->
+    <section class="py-5 bg-light-green">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <h2 class="text-green">Our ATM Services</h2>
+                <p>Comprehensive financial solutions at your fingertips</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4 col-sm-6">
+                    <div class="text-center p-4">
+                        <div class="atm-feature-icon">
+                            <i class="fas fa-money-bill-wave"></i>
+                        </div>
+                        <h4 class="text-green">Cash Withdrawal</h4>
+                        <p>Instant cash access with competitive withdrawal limits to meet your daily needs</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-sm-6">
+                    <div class="text-center p-4">
+                        <div class="atm-feature-icon">
+                            <i class="fas fa-file-invoice-dollar"></i>
+                        </div>
+                        <h4 class="text-green">Balance Inquiry</h4>
+                        <p>Check your account balance anytime without visiting the bank</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-sm-6">
+                    <div class="text-center p-4">
+                        <div class="atm-feature-icon">
+                            <i class="fas fa-receipt"></i>
+                        </div>
+                        <h4 class="text-green">Mini Statements</h4>
+                        <p>Get quick overview of your recent transactions at our Financial District location</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-sm-6">
+                    <div class="text-center p-4">
+                        <div class="atm-feature-icon">
+                            <i class="fas fa-fingerprint"></i>
+                        </div>
+                        <h4 class="text-green">Biometric Access</h4>
+                        <p>Secure authentication using fingerprint technology at our Main Road location</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-sm-6">
+                    <div class="text-center p-4">
+                        <div class="atm-feature-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h4 class="text-green">Contactless Transactions</h4>
+                        <p>Tap-and-go functionality for faster, more convenient transactions</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-sm-6">
+                    <div class="text-center p-4">
+                        <div class="atm-feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4 class="text-green">Advanced Security</h4>
+                        <p>24/7 surveillance and anti-skimming technology for your protection</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <h2 class="text-green">What People Say About Our ATMs</h2>
+                <p>Feedback from our valued users in Hitech City</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4 col-sm-6">
+                    <div class="card h-100">
+                        <div class="card-body p-4">
+                            <div class="d-flex mb-3">
+                                <img src="../images/testimonials/user1.jpg" class="rounded-circle me-3" width="60" height="60" alt="Customer">
+                                <div>
+                                    <h5 class="mb-1">Rahul Sharma</h5>
+                                    <div class="text-warning">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>"The ATM near Cyber Towers is always operational and has the shortest queues. Very convenient for quick cash withdrawals during lunch breaks."</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-sm-6">
+                    <div class="card h-100">
+                        <div class="card-body p-4">
+                            <div class="d-flex mb-3">
+                                <img src="../images/testimonials/user2.jpg" class="rounded-circle me-3" width="60" height="60" alt="Customer">
+                                <div>
+                                    <h5 class="mb-1">Priya Reddy</h5>
+                                    <div class="text-warning">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>"I use the Financial District ATM regularly. The biometric authentication makes it very secure and the interface is user-friendly."</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-sm-6 mx-auto">
+                    <div class="card h-100">
+                        <div class="card-body p-4">
+                            <div class="d-flex mb-3">
+                                <img src="../images/testimonials/user3.jpg" class="rounded-circle me-3" width="60" height="60" alt="Customer">
+                                <div>
+                                    <h5 class="mb-1">Arjun Kapoor</h5>
+                                    <div class="text-warning">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>"These ATMs are a lifesaver in Hitech City where banking options are limited. Never had any issues with transactions."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5 bg-green text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mb-3 mb-lg-0">
+                    <h2 class="mb-3">Have Questions About Our ATM Services?</h2>
+                    <p class="lead mb-lg-0">Contact us for more information about our existing ATMs or partnership opportunities.</p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a href="../contact.php" class="btn btn-light btn-lg">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="../images/logo-bg.png" alt="Saakra Enterprises" height="40" class="me-2">
+                        <span class="company-name">Saakra Enterprises Pvt Ltd</span>
+                    </div>
+                    <p>Dream It. Design It. Deliver It.</p>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="text-green">Services</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="oil-vendor.php" class="text-white">Oil Vendor</a></li>
+                        <li><a href="tyres-trading.php" class="text-white">Tyres Trading</a></li>
+                        <li><a href="atm-franchise.php" class="text-white">ATM Franchise</a></li>
+                        <li><a href="transport.php" class="text-white">Transport</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="text-green">Digital Services</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="ecommerce.php" class="text-white">E-Commerce</a></li>
+                        <li><a href="it-services.php" class="text-white">IT Services</a></li>
+                        <li><a href="it-services.php" class="text-white">Web Development</a></li>
+                        <li><a href="it-services.php" class="text-white">Digital Marketing</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5 class="text-green">Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-map-marker-alt me-2 text-green"></i> Salem, Tamilnadu, India</li>
+                        <li><i class="fas fa-phone me-2 text-green"></i> +91 99441 11597</li>
+                        <li><i class="fas fa-envelope me-2 text-green"></i> saakraenterprisespvtltd.com</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="small mb-0">&copy; 2025 Saakra Enterprises Pvt Ltd. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="small mb-0">
+                        <a href="#" class="text-white">Privacy Policy</a> | 
+                        <a href="#" class="text-white">Terms of Service</a>
+                    </p>
+                </div>
+            </div>
+            <div class="text-start mt-3">
+                <p class="small mb-0"><strong>Designed by the Saakra IT Team</strong></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="../js/script.js"></script>
+    <script>
+        // Initialize AOS (Animate On Scroll)
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Loading animation
+        window.addEventListener('load', function() {
+            const loader = document.querySelector('.loader');
+            loader.style.opacity = '0';
+            setTimeout(() => {
+                loader.style.display = 'none';
+            }, 500);
+            
+            // Add animation to navbar items after load
+            const navItems = document.querySelectorAll('.nav-item');
+            navItems.forEach((item, index) => {
+                item.style.animation = `fadeIn 0.5s ease forwards ${index * 0.1 + 0.5}s`;
+                item.style.opacity = '0';
+            });
+        });
+
+        // Mobile menu close on click
+        document.addEventListener('DOMContentLoaded', function() {
+            const navbarToggler = document.querySelector('.navbar-toggler');
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (window.innerWidth < 992) {
+                        navbarCollapse.classList.remove('show');
+                    }
+                });
+            });
+
+            // Enhanced Navbar scroll effect
+            window.addEventListener('scroll', function() {
+                const navbar = document.querySelector('.navbar');
+                const logo = document.querySelector('.navbar-brand img');
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                    document.querySelector('.company-name').style.fontSize = '1rem';
+                    if (logo) logo.style.height = '45px';
+                } else {
+                    navbar.classList.remove('scrolled');
+                    document.querySelector('.company-name').style.fontSize = '1.2rem';
+                    if (logo) logo.style.height = '55px';
+                }
+            });
+
+            // Smooth scrolling for all links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        window.scrollTo({
+                            top: target.offsetTop - document.querySelector('.navbar').offsetHeight,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Hover effect for dropdown items
+            const dropdownItems = document.querySelectorAll('.dropdown-item');
+            dropdownItems.forEach(item => {
+                item.addEventListener('mouseenter', () => {
+                    const iconCircle = item.querySelector('.service-icon-circle');
+                    if (iconCircle) {
+                        iconCircle.style.transform = 'scale(1.1)';
+                        iconCircle.style.backgroundColor = 'rgba(39, 226, 92, 0.2)';
+                    }
+                });
+                item.addEventListener('mouseleave', () => {
+                    const iconCircle = item.querySelector('.service-icon-circle');
+                    if (iconCircle) {
+                        iconCircle.style.transform = 'scale(1)';
+                        iconCircle.style.backgroundColor = 'rgba(39, 226, 92, 0.1)';
+                    }
+                });
+            });
+
+            // Back to top button
+            window.addEventListener('scroll', function() {
+                var backToTop = document.getElementById('backToTop');
+                if (window.pageYOffset > 300) {
+                    backToTop.style.display = 'flex';
+                } else {
+                    backToTop.style.display = 'none';
+                }
+            });
+            
+            document.getElementById('backToTop').addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({top: 0, behavior: 'smooth'});
+            });
+        });
+    </script>
+
+    <a id="backToTop" href="#" class="btn btn-green position-fixed bottom-0 end-0 m-3" style="display: none;">↑</a>
+</body>
+</html>
