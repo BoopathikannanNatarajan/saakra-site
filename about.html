@@ -280,7 +280,7 @@
             position: absolute;
             width: 25px;
             height: 25px;
-            background-color: white;
+            background-color: rgb(125, 217, 120);
             border: 4px solid var(--green);
             border-radius: 50%;
             top: 15px;
@@ -289,7 +289,7 @@
         .timeline-year {
             padding: 5px 15px;
             background-color: var(--green);
-            color: white;
+            color: rgb(84, 220, 166);
             border-radius: 20px;
             font-weight: bold;
             display: inline-block;
@@ -297,7 +297,7 @@
         }
         .timeline-content {
             padding: 20px;
-            background-color: white;
+            background-color: rgb(111, 224, 132);
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
@@ -643,52 +643,58 @@
         </div>
     </section>
 
-    <!-- Team Section -->
-    <section class="py-5">
+   <!-- Team Section -->
+<section class="py-5 bg-light">
     <div class="container">
         <div class="section-header text-center mb-5">
             <h2 class="text-green">Meet Our Leadership</h2>
             <p class="text-muted">The driving force behind Saakra Enterprises</p>
         </div>
         
-        <div class="row g-3 justify-content-center">
-            <div class="col-md-4 mb-4">
-                <div class="card team-card h-100">
-                    <div class="text-center pt-3">  <!-- Added wrapper div for better control -->
-                        <img src="images/MDsaakra.jpg" class="card-img-top rounded-circle" style="width: 150px; height: 150px; object-fit: cover;" alt="CEO">
+        <div class="row justify-content-center">
+            <div class="row justify-content-center">
+                <div class="row justify-content-center">
+                    <div class="row justify-content-center">
+                        <!-- Director Card (No Icon) -->
+                        <div class="col-lg-5 col-md-6 mb-4">
+                            <div class="card team-card h-100 border-0 shadow-sm">
+                                <div class="card-body p-4 d-flex flex-column text-center">
+                                    <!-- Name starts directly here (no empty space) -->
+                                    <h4 class="text-green mb-1">SUHANA V</h4>
+                                    <p class="text-muted fw-bold mb-3">DIRECTOR (SAAKRA ENTERPRISES PVT LTD)</p>
+                                    <p class="mb-4">Experience in software development and quality assurance, Director of Saakra Enterprises with a vision to deliver testing solutions and innovative software products that transform businesses.</p>
+                                    
+                                    <div class="social-links d-flex justify-content-center gap-3 mt-auto">
+                                        <a href="#" class="text-green"><i class="fab fa-linkedin-in"></i></a>
+                                        <a href="#" class="text-green"><i class="fab fa-twitter"></i></a>
+                                        <a href="#" class="text-green"><i class="fas fa-envelope"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-body text-center">
-                        <h5 class="text-green">SUHANA V</h5>
-                        <p class="text-muted">DIRECTOR (SAAKRA ENTERPRISES PVT LTD)</p>
-                        <p class="small">Experience in software development and quality assurance, Director of Saakra Enterprises with a vision to deliver testing solutions and innovative software products that transform businesses.</p>
-                        <div class="social-links">
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fas fa-envelope"></i></a>
+                    <!-- Managing Director (With Image) -->
+                    <div class="col-lg-5 col-md-6 mb-4">
+                        <div class="card team-card h-100 border-0 shadow-sm">
+                            <div class="card-body p-4 text-center">
+                                <div class="mx-auto mb-3" style="width: 150px; height: 150px;">
+                                    <img src="images/Directorsaakra.jpg" class="img-fluid rounded-circle w-100 h-100 object-fit-cover" alt="Managing Director">
+                                </div>
+                                <h4 class="text-green mt-3 mb-1">AASHIK AASAN K</h4>
+                                <p class="text-muted fw-bold mb-3">MD (SAAKRA ENTERPRISES PVT LTD)</p>
+                                <p class="mb-4 px-3">With 16+ years of cross-domain expertise spanning IT solutions, trading operations, Transport Services, franchise development, Indian oil vendor, and e-commerce ventures, Managing Director of Saakra Enterprises with a vision for diversified business excellence.</p>
+                                <div class="social-links d-flex justify-content-center gap-3">
+                                    <a href="#" class="text-green"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#" class="text-green"><i class="fab fa-twitter"></i></a>
+                                    <a href="#" class="text-green"><i class="fas fa-envelope"></i></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            
-            <div class="col-md-4 mb-4">
-                <div class="card team-card h-100">
-                    <div class="text-center pt-3">  <!-- Added wrapper div for better control -->
-                        <img src="images/Directorsaakra.jpg" class="card-img-top rounded-circle" style="width: 150px; height: 150px; object-fit: cover;" alt="Director">
-                    </div>
-                    <div class="card-body text-center">
-                        <h5 class="text-green">AASHIK AASAN K</h5>
-                        <p class="text-muted">MD (SAAKRA ENTERPRISES PVT LTD)</p>
-                        <p class="small">With 16+ years of cross-domain expertise spanning IT solutions, trading operations ,Transport Services, franchise development, Indian oil vendor, and e-commerce ventures, Managing Director of Saakra Enterprises with a vision for diversified business excellence.</p>
-                        <div class="social-links">
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fas fa-envelope"></i></a>
-                        </div>
-                    </div>
                 </div>
             </div>
-        </div>
-    </div>
+                    
 </section>
     <!-- Milestones -->
     <section class="py-5 bg-light">
@@ -700,7 +706,7 @@
             
             <div class="timeline">
                 <div class="timeline-item left">
-                    <div class="timeline-year">2021</div>
+                    <div class="timeline-year"><b>2021</b></div>
                     <div class="timeline-content">
                         <h5 class="text-green">Company Founded</h5>
                         <p>Saakra Enterprises established as an Indian Oil vendor in Sankari,Salem.Serving local businesses with fuel distribution services.</p>
@@ -708,7 +714,7 @@
                 </div>
                 
                 <div class="timeline-item right">
-                    <div class="timeline-year">2021</div>
+                    <div class="timeline-year"><b>2021</b></div>
                     <div class="timeline-content">
                         <h5 class="text-green">Tyres Trading Division</h5>
                         <p>Expanded into tyre trading, providing quality tyres to transport and logistics companies.</p>
@@ -716,7 +722,7 @@
                 </div>
                 
                 <div class="timeline-item left">
-                    <div class="timeline-year">2023</div>
+                    <div class="timeline-year"><b>2023</b></div>
                     <div class="timeline-content">
                         <h5 class="text-green">ATM Franchise Services</h5>
                         <p>Partnered with major banks to provide ATM franchise services across Maharashtra.</p>
@@ -732,7 +738,7 @@
                 </div>
                 
                 <div class="timeline-item left">
-                    <div class="timeline-year">2022</div>
+                    <div class="timeline-year"><b>2022</b></div>
                     <div class="timeline-content">
                         <h5 class="text-green">E-Commerce Services</h5>
                         <p>Established e-commerce division to help businesses sell online through Amazon, Flipkart, and Meesho.</p>
@@ -740,7 +746,7 @@
                 </div>
                 
                 <div class="timeline-item right">
-                    <div class="timeline-year">2025</div>
+                    <div class="timeline-year"><b>2025</b></div>
                     <div class="timeline-content">
                         <h5 class="text-green">IT Services Launch</h5>
                         <p>Added web development, design, and digital marketing services to our portfolio.</p>
@@ -765,47 +771,47 @@
         <div class="row">
             <div class="col-lg-4 mb-4">
                 <div class="d-flex align-items-center mb-3">
-                    <img src="images/logo-bg.png" alt="Saakra Enterprises" height="40" class="me-2">
+                    <img src="../images/logo-bg.png" alt="Saakra Enterprises" height="40" class="me-2">
                     <span class="company-name">Saakra Enterprises Pvt Ltd</span>
                 </div>
                 <p>Dream It. Design It. Deliver It.</p>
                 <div class="social-icons">
-                    <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="text-white me-2"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
             <div class="col-lg-2 col-md-6 mb-4">
                 <h5 class="text-green">Services</h5>
                 <ul class="list-unstyled">
-                    <li class="mb-2"><a href="pages/oil-vendor.php" class="text-white">Oil Vendor</a></li>
-                    <li class="mb-2"><a href="pages/tyres-trading.php" class="text-white">Tyres Trading</a></li>
-                    <li class="mb-2"><a href="pages/atm-franchise.php" class="text-white">ATM Franchise</a></li>
-                    <li class="mb-2"><a href="services/transport.php" class="text-white">Transport</a></li>
+                    <li><a href="oil-vendor.php" class="text-white">Indian Oil Vendor</a></li>
+                    <li><a href="tyres-trading.php" class="text-white">Tyres Trading</a></li>
+                    <li><a href="atm-franchise.php" class="text-white">ATM Franchise</a></li>
+                    <li><a href="transport.php" class="text-white">Transport</a></li>
                 </ul>
             </div>
             <div class="col-lg-2 col-md-6 mb-4">
                 <h5 class="text-green">Digital Services</h5>
                 <ul class="list-unstyled">
-                    <li class="mb-2"><a href="pages/ecommerce.php" class="text-white">E-Commerce</a></li>
-                    <li class="mb-2"><a href="pages/it-services.php" class="text-white">IT Services</a></li>
-                    <li class="mb-2"><a href="pages/it-services.php" class="text-white">Web Development</a></li>
-                    <li class="mb-2"><a href="pages/it-services.php" class="text-white">Digital Marketing</a></li>
+                    <li><a href="ecommerce.php" class="text-white">E-Commerce</a></li>
+                    <li><a href="it-services.php" class="text-white">IT Services</a></li>
+                    <li><a href="it-services.php" class="text-white">Web Development</a></li>
+                    <li><a href="it-services.php" class="text-white">Digital Marketing</a></li>
                 </ul>
             </div>
             <div class="col-lg-4 mb-4">
                 <h5 class="text-green">Contact Us</h5>
                 <ul class="list-unstyled">
-                    <li class="mb-3"><i class="fas fa-map-marker-alt me-2 text-green"></i> Salem, Tamilnadu, India</li>
-                    <li class="mb-3"><i class="fas fa-phone me-2 text-green"></i> +91 99441 11597</li>
-                    <li class="mb-3"><i class="fas fa-envelope me-2 text-green"></i> saakraenterprisespvtltd.com</li>
+                    <li><i class="fas fa-map-marker-alt me-2 text-green"></i> Salem, Tamilnadu, India</li>
+                    <li><i class="fas fa-phone me-2 text-green"></i> +91 99 44 111 597</li>
+                    <li><i class="fas fa-envelope me-2 text-green"></i> saakraenterprisespvtltd.com</li>
                 </ul>
             </div>
         </div>
-        <hr class="my-4 bg-secondary">
+        <hr class="my-4">
         <div class="row">
-            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+            <div class="col-md-6 text-center text-md-start">
                 <p class="small mb-0">&copy; 2025 Saakra Enterprises Pvt Ltd. All rights reserved.</p>
             </div>
             <div class="col-md-6 text-center text-md-end">
@@ -815,12 +821,11 @@
                 </p>
             </div>
         </div>
-        <div class="text-center mt-3">
+        <div class="text-start mt-3">
             <p class="small mb-0"><strong>Designed by the Saakra IT Team</strong></p>
         </div>
     </div>
 </footer>
-
     <!-- Back to Top Button -->
     <a id="backToTop" href="#" class="btn btn-green position-fixed bottom-0 end-0 m-3" style="display: none;"><i class="fas fa-arrow-up"></i></a>
 

@@ -859,23 +859,31 @@
                         <div class="hero-features animate__animated animate__fadeInUp animate__delay-2s">
                             <div class="feature-item">
                                 <i class="fas fa-check-circle text-green me-2"></i>
-                                <span>25+ Industries Served</span>
+                                <span>15+ Industries Served</span>
                             </div>
                             <div class="feature-item">
                                 <i class="fas fa-check-circle text-green me-2"></i>
-                                <span>500+ Happy Clients</span>
+                                <span>150+ Happy Clients</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 order-lg-2 order-1">
-                    <div class="hero-image-container animate__animated animate__fadeInRight">
-                        <img src="images/logo.png" alt="Business Solutions" class="img-fluid hero-image float">
-                        <div class="hero-image-badge animate__animated animate__pulse animate__infinite">
-                            <i class="fas fa-award me-2"></i>
-                            <span>Quality Certified</span>
+                <div class="col-lg-6 order-lg-2 order-1 d-flex align-items-center justify-content-center">
+                    <div class="position-relative" style="max-width: 400px;">
+                        <!-- Clean logo display with transparent background -->
+                        <img src="images/logo-bg.png" alt="Company Logo" 
+                             class="img-fluid" 
+                             style="background: transparent; width: 100%; height: auto;">
+                        
+                        <!-- Minimal quality badge -->
+                        <div class="position-absolute top-0 end-0 mt-3 me-3">
+                            <span class="badge bg-green text-white p-2 animate__animated animate__pulse animate__infinite">
+                                <i class="fas fa-award me-1"></i>
+                                Certified
+                            </span>
                         </div>
                     </div>
+                </div>
                 </div>
             </div>
         </div>
@@ -895,27 +903,30 @@
             </div>
             
             <div class="row g-4 justify-content-center">
-                <!-- Oil Vendor -->
-                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
-                    <div class="card service-card h-100 border-0">
-                        <div class="card-body text-center p-4">
-                            <div class="service-icon-circle-lg rounded-circle mx-auto mb-4 d-flex align-items-center justify-content-center">
-                                <i class="fas fa-gas-pump text-green" style="font-size: 1.5rem;"></i>
-                            </div>
-                            <h5 class="text-green mb-3">Indian Oil Vendor</h5>
-                            <p class="mb-4">Reliable fuel distribution services with quality assurance and timely delivery.</p>
-                            <div class="service-features mb-4">
-                                <span><i class="fas fa-check-circle text-green me-2"></i> Bulk Supply</span>
-                                <span><i class="fas fa-check-circle text-green me-2"></i> Quality Assurance</span>
-                            </div>
-                            <a href="pages/oil-vendor.php" class="btn btn-outline-green btn-arrow">
-                                <span>Explore Service</span>
-                                <i class="fas fa-arrow-right ms-2"></i>
-                            </a>
-                        </div>
-                    </div>
+         <!-- Professional Landscaping & Construction -->
+<div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+    <div class="card service-card h-100 border-0">
+        <div class="card-body text-center p-4">
+            <div class="service-icon-circle-lg rounded-circle mx-auto mb-4 d-flex align-items-center justify-content-center">
+                <i class="fas fa-tractor text-green" style="font-size: 1.5rem;"></i>
+            </div>
+            <h5 class="text-green mb-3">Professional Landscaping & Construction</h5>
+            <p class="mb-4">Comprehensive outdoor solutions from design to implementation with premium quality materials.</p>
+            <div class="service-features mb-4">
+                <div class="text-start mb-2">
+                    <i class="fas fa-check-circle text-green me-2"></i> 
+                    <span>Landscape Design & Installation</span>
                 </div>
-                
+             
+               
+            </div>
+            <a href="pages/landscaping-construction.php" class="btn btn-outline-green btn-arrow">
+                <span>Explore Service</span>
+                <i class="fas fa-arrow-right ms-2"></i>
+            </a>
+        </div>
+    </div>
+</div>
                 <!-- Tyres Trading -->
                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="card service-card h-100 border-0">
@@ -1193,74 +1204,64 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
+      <!-- Footer -->
+      <footer class="py-5 bg-dark text-white">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 mb-5 mb-lg-0">
-                    <div class="footer-logo">
-                        <img src="images/logo-bg.png" alt="Saakra Enterprises">
-                        <span class="footer-logo-text text-white">Saakra Enterprises Pvt Ltd</span>
+                <div class="col-lg-4 mb-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="../images/logo-bg.png" alt="Saakra Enterprises" height="40" class="me-2">
+                        <span class="company-name">Saakra Enterprises Pvt Ltd</span>
                     </div>
                     <p>Dream It. Design It. Deliver It.</p>
                     <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
-                    <h5>Services</h5>
-                    <ul>
-                        <li><a href="pages/oil-vendor.php">Oil Vendor</a></li>
-                        <li><a href="pages/tyres-trading.php">Tyres Trading</a></li>
-                        <li><a href="pages/atm-franchise.php">ATM Franchise</a></li>
-                        <li><a href="pages/transport.php">Transport</a></li>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="text-green">Services</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="oil-vendor.php" class="text-white">Indian Oil Vendor</a></li>
+                        <li><a href="tyres-trading.php" class="text-white">Tyres Trading</a></li>
+                        <li><a href="atm-franchise.php" class="text-white">ATM Franchise</a></li>
+                        <li><a href="transport.php" class="text-white">Transport</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
-                    <h5>Digital Services</h5>
-                    <ul>
-                        <li><a href="pages/ecommerce.php">E-Commerce</a></li>
-                        <li><a href="pages/it-services.php">IT Services</a></li>
-                        <li><a href="pages/it-services.php">Web Development</a></li>
-                        <li><a href="pages/it-services.php">Digital Marketing</a></li>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="text-green">Digital Services</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="ecommerce.php" class="text-white">E-Commerce</a></li>
+                        <li><a href="it-services.php" class="text-white">IT Services</a></li>
+                        <li><a href="it-services.php" class="text-white">Web Development</a></li>
+                        <li><a href="it-services.php" class="text-white">Digital Marketing</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-4">
-                    <h5>Contact Us</h5>
-                    <ul class="footer-contact">
-                        <li>
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Salem, Tamilnadu, India</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-phone"></i>
-                            <span>+91 99441 11597</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-envelope"></i>
-                            <span>saakraenterprisespvtltd.com</span>
-                        </li>
+                <div class="col-lg-4 mb-4">
+                    <h5 class="text-green">Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-map-marker-alt me-2 text-green"></i> Salem, Tamilnadu, India</li>
+                        <li><i class="fas fa-phone me-2 text-green"></i> +91 99 44 111 597</li>
+                        <li><i class="fas fa-envelope me-2 text-green"></i> saakraenterprisespvtltd.com</li>
                     </ul>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        <p class="small mb-0">&copy; 2025 Saakra Enterprises Pvt Ltd. All rights reserved.</p>
-                    </div>
-                    <div class="col-md-6 text-center text-md-end">
-                        <p class="small mb-0">
-                            <a href="#" class="text-white">Privacy Policy</a> | 
-                            <a href="#" class="text-white">Terms of Service</a>
-                        </p>
-                    </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="small mb-0">&copy; 2025 Saakra Enterprises Pvt Ltd. All rights reserved.</p>
                 </div>
-                <div class="text-center mt-3">
-                    <p class="small mb-0"><strong>Designed by the Saakra IT Team</strong></p>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="small mb-0">
+                        <a href="#" class="text-white">Privacy Policy</a> | 
+                        <a href="#" class="text-white">Terms of Service</a>
+                    </p>
                 </div>
+            </div>
+            <div class="text-start mt-3">
+                <p class="small mb-0"><strong>Designed by the Saakra IT Team</strong></p>
             </div>
         </div>
     </footer>
