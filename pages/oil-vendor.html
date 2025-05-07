@@ -14,11 +14,14 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
         :root { 
-            --green: #27e25c; 
-            --dark-green: #1e7e34; 
-            --green-light: #d4edda; 
-            --animation-duration: 0.5s;
-        }
+    
+      --primary-green: #00652d;
+      --secondary-green: #83b744;
+      --green-light: #e8f5e9;
+      --neon-glow: #00ff41;
+      --animation-duration: 0.5s;
+    }
+            
         .text-green { color: var(--green); }
         .bg-green { background-color: var(--green); }
         .bg-dark-green { background-color: var(--dark-green); }
@@ -41,7 +44,7 @@
         }
         .btn-outline-green:hover { 
             background-color: var(--green); 
-            color: white;
+            color: rgb(255, 255, 255);
             transform: translateY(-2px);
         }
         
@@ -97,7 +100,7 @@
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
-            background-color: white;
+            background-color: rgb(130, 221, 145);
             transition: width var(--animation-duration) ease;
         }
         .nav-link:hover::after,
@@ -437,7 +440,7 @@
                     <a href="#quote" class="btn btn-green btn-lg mt-3">Request Quote</a>
                 </div>
                 <div class="col-lg-6 text-lg-end text-center mt-lg-0 mt-4">
-                    <img src="../images/indianoil_logo.jpg" alt="Landscaping Services" class="img-fluid hover-scale" style="max-width: 400px; height: auto; transform: perspective(1000px) rotateY(0deg); transition: transform 0.5s;">
+                    <img src="../images/indianoil-vendor.jpg" alt="Landscaping Services" class="img-fluid hover-scale" style="max-width: 400px; height: auto; transform: perspective(1000px) rotateY(0deg); transition: transform 0.5s;">
                 </div>
                 <script>
                     document.querySelector('.hover-scale').addEventListener('mouseover', function() {

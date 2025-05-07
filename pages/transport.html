@@ -3,26 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ATM Franchise Services in Hitech City | Saakra Enterprises Pvt Ltd</title>
+    <title>Transport Services | Saakra Enterprises Pvt Ltd</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
-    <!-- AOS Animation -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
     <style>
         :root { 
-            --green: #27e25c; 
-            --dark-green: #1e7e34; 
-            --green-light: #d4edda; 
+            --primary-green: #00652d;
+      --secondary-green: #83b744;
+      --green-light: #e8f5e9;
             --animation-duration: 0.5s;
         }
+        .text-green { color: var(--green); }
+        .bg-green { background-color: var(--green); }
+        .bg-dark-green { background-color: var(--dark-green); }
+        .bg-green-light { background-color: var(--green-light); }
+        .btn-green { 
+            background-color: var(--green); 
+            color: white;
+            transition: all var(--animation-duration) ease;
+        }
+        .btn-green:hover { 
+            background-color: var(--dark-green); 
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .btn-outline-green { 
+            border-color: var(--green); 
+            color: var(--green);
+            transition: all var(--animation-duration) ease;
+        }
+        .btn-outline-green:hover { 
+            background-color: var(--green); 
+            color: white;
+            transform: translateY(-2px);
+        }
         
-        /* Enhanced Navbar Styles */
+        /* Enhanced Header/Navbar Styles */
         .navbar { 
             padding: 15px 0;
             transition: all 0.3s ease;
@@ -39,12 +61,12 @@
             transition: all 0.3s ease;
             margin-left: 10px;
             font-size: 1.2rem;
-            color: white;
         }
         .dropdown-menu-creative { 
             padding: 15px; 
             border: none; 
             box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            animation: fadeIn var(--animation-duration) ease;
             border-radius: 10px;
             margin-top: 10px;
         }
@@ -65,7 +87,6 @@
             font-weight: 500;
             margin: 0 5px;
             border-radius: 5px;
-            color: white !important;
         }
         .nav-link::after {
             content: '';
@@ -98,9 +119,39 @@
         .navbar-brand:hover img {
             transform: rotate(5deg) scale(1.1);
         }
+        
+        /* Header Spacing */
         .header-space {
             height: 80px; /* Adjust based on your navbar height */
         }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes slideInDown {
+            from { transform: translateY(-100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .fade-in {
+            animation: fadeIn 1s ease forwards;
+        }
+        .slide-in-down {
+            animation: slideInDown 0.8s ease-out forwards;
+        }
+        .pulse {
+            animation: pulse 2s infinite ease-in-out;
+        }
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+        .delay-4 { animation-delay: 0.8s; }
         
         /* Loading animation */
         .loader {
@@ -135,96 +186,94 @@
         @keyframes spin {
             100% { transform: rotate(360deg); }
         }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes slideInDown {
-            from { transform: translateY(-100%); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-        .fade-in {
-            animation: fadeIn 1s ease forwards;
-        }
-        .slide-in-down {
-            animation: slideInDown 0.8s ease-out forwards;
-        }
-        .pulse {
-            animation: pulse 2s infinite ease-in-out;
-        }
-        .delay-1 { animation-delay: 0.2s; }
-        .delay-2 { animation-delay: 0.4s; }
-        .delay-3 { animation-delay: 0.6s; }
-        .delay-4 { animation-delay: 0.8s; }
-
-        /* ATM Page Specific Styles */
-        .atm-location-card {
+        
+        /* Transport Page Specific Styles */
+        .transport-card {
             transition: transform 0.3s;
+            border: 1px solid #28a745;
+            margin-bottom: 20px;
         }
-        .atm-location-card:hover {
+        .transport-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
-        .atm-feature-icon {
-            font-size: 2rem;
-            color: var(--green);
+        .service-icon {
+            font-size: 2.5rem;
+            color: #28a745;
             margin-bottom: 1rem;
         }
-        /* Hero section image size adjustment */
-        .hero-image {
-            max-height: 400px;
-            width: auto;
+        .fleet-image {
+            height: 200px;
             object-fit: cover;
+            width: 100%;
         }
-        
-        .border-green {
-            border: 1px solid var(--green);
+        .bg-dark-green {
+            background-color: #1a472a;
         }
         .bg-green {
-            background-color: var(--green);
+            background-color: #28a745;
         }
         .bg-light-green {
-            background-color: var(--green-light);
+            background-color: #e8f5e9;
         }
         .text-green {
-            color: var(--green);
+            color: #28a745;
         }
-        .btn-green { 
-            background-color: var(--green); 
+        .btn-green {
+            background-color: #28a745;
             color: white;
-            transition: all var(--animation-duration) ease;
         }
-        .btn-green:hover { 
-            background-color: var(--dark-green); 
+        .btn-outline-green {
+            border-color: #28a745;
+            color: #28a745;
+        }
+        .btn-outline-green:hover {
+            background-color: #28a745;
             color: white;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
-        .btn-outline-green { 
-            border-color: var(--green); 
-            color: var(--green);
-            transition: all var(--animation-duration) ease;
+        .page-header {
+            padding: 3rem 0;
         }
-        .btn-outline-green:hover { 
-            background-color: var(--green); 
-            color: white;
-            transform: translateY(-2px);
+        @media (max-width: 768px) {
+            .page-header {
+                padding: 2rem 0;
+                text-align: center;
+            }
+            .page-header img {
+                margin-top: 20px;
+                width: 100% !important;
+                transform: none !important;
+            }
+            .section-header {
+                text-align: center;
+            }
+            .fleet-image {
+                height: 150px;
+            }
+            .service-icon {
+                font-size: 2rem;
+            }
+        }
+        @media (max-width: 576px) {
+            .page-header {
+                padding: 1.5rem 0;
+            }
+            .card-body {
+                padding: 1.5rem;
+            }
+            .fleet-statistics h2 {
+                font-size: 1.5rem;
+            }
         }
         
         /* Responsive adjustments */
         @media (max-width: 767.98px) {
-            .hero-image {
-                max-height: 300px;
-            }
             .navbar-collapse { 
                 background: rgba(30, 126, 52, 0.95); 
                 padding: 15px; 
                 border-radius: 10px; 
                 margin-top: 15px;
+                animation: fadeIn var(--animation-duration) ease;
                 backdrop-filter: blur(10px);
             }
             .company-name {
@@ -240,11 +289,7 @@
             .nav-link::after {
                 display: none;
             }
-            .header-space {
-                height: 70px;
-            }
         }
-        
         @media (max-width: 575.98px) {
             .navbar-brand {
                 flex-direction: row;
@@ -255,51 +300,9 @@
                 margin-left: 10px;
                 font-size: 0.9rem;
             }
-        }
-        
-        /* Improved responsive styles for services dropdown */
-        @media (max-width: 991.98px) {
-            .dropdown-menu-creative {
-                width: 100%;
-                border: none;
-                box-shadow: none;
+            .header-space {
+                height: 70px;
             }
-            .service-icon-circle {
-                width: 40px;
-                height: 40px;
-            }
-            .dropdown-item {
-                padding: 0.5rem 1rem;
-            }
-        }
-        @media (min-width: 992px) {
-            .dropdown-menu-creative {
-                width: 400px;
-                padding: 1rem;
-            }
-        }
-        
-        /* Footer */
-        footer a {
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        footer a:hover {
-            color: var(--green) !important;
-        }
-        .social-icons a {
-            display: inline-block;
-            width: 35px;
-            height: 35px;
-            background-color: rgba(255,255,255,0.1);
-            border-radius: 50%;
-            text-align: center;
-            line-height: 35px;
-            margin-right: 10px;
-            transition: background-color 0.3s;
-        }
-        .social-icons a:hover {
-            background-color: var(--green);
         }
     </style>
 </head>
@@ -313,9 +316,9 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark-green sticky-top slide-in-down">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="#">
+            <a class="navbar-brand d-flex align-items-center" href="../index.php">
                 <img src="../images/logo.png" alt="Saakra Enterprises" height="55" class="me-2 border border-2 border-white rounded-circle p-1 bg-white pulse">
-                <span class="company-name">Saakra Enterprises Pvt Ltd</span>
+                <span class="company-name text-white">Saakra Enterprises Pvt Ltd</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -359,7 +362,7 @@
                                     <small class="text-muted">Efficient logistics</small>
                                 </div>
                             </a></li>
-                            <li><a class="nav-link active dropdown-item d-flex align-items-center" href="atm-franchise.php">
+                            <li><a class="dropdown-item d-flex align-items-center" href="atm-franchise.php">
                                 <div class="service-icon-circle me-3">
                                     <i class="fas fa-money-bill-wave text-green"></i>
                                 </div>
@@ -403,77 +406,85 @@
             </div>
         </div>
     </nav>
+    
+    <!-- Page Header -->
+    <header class="page-header py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="text-green">Transport Services</h1>
+                    <p class="lead">Reliable and efficient logistics solutions for your business needs</p>
+                    <a href="#our-services" class="btn btn-green btn-lg mt-3">Explore Services</a>
+                </div>
+                <div class="col-lg-6">
+                    <img src="../images/transport-header.jpg" alt="Transport Services" class="img-fluid rounded shadow" style="width: 80%; transform: perspective(1000px) rotateY(15deg);">
+                </div>
+            </div>
+        </div>
+    </header>
 
-    <!-- Header Space (to prevent content from being hidden under fixed navbar) -->
-    <div class="header-space"></div>
-
-    <!-- Our ATMs Section -->
-    <section class="py-5 bg-white" id="atm-locations">
+    <!-- Our Services -->
+    <section class="py-5 bg-white" id="our-services">
         <div class="container">
             <div class="section-header text-center mb-5">
-                <h2 class="text-green">Our ATM Locations in Hitech City</h2>
-                <p>Strategically placed for maximum convenience and accessibility</p>
+                <h2 class="text-green">Our Transport Solutions</h2>
+                <p>Comprehensive logistics services tailored to your requirements</p>
             </div>
             
-            <div class="row g-4 justify-content-center">
-                <!-- ATM Location 1 -->
-                <div class="col-md-6">
-                    <div class="card atm-location-card h-100 border-green">
-                        <div class="card-body">
-                            <h3 class="text-green">Sankari RS,Tiruchengode Main Road ATM</h3>
-                            <p class="text-muted"><i class="fas fa-map-marker-alt text-green me-2"></i>Tiruchengode Main Road, Sankari,Salem</p>
-                            <div class="mb-3">
-                                <span class="badge bg-green text-white me-2">24/7 Access</span>
-                                <span class="badge bg-green text-white me-2">Cash Withdrawal</span>
-                                <span class="badge bg-green text-white">Balance Inquiry</span>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card transport-card h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="service-icon">
+                                <i class="fas fa-truck"></i>
                             </div>
-                            <p>Our flagship ATM located in the heart of Hitech City, serving thousands of IT professionals daily. Features include:</p>
-                            <ul>
-                                <li>High transaction capacity</li>
-                                <li>Biometric authentication</li>
-                                <li>Multi-bank compatibility</li>
-                                <li>Regular maintenance</li>
+                            <h3 class="text-green">Goods Transportation</h3>
+                            <p>Safe and timely delivery of goods across the region</p>
+                            <ul class="text-start ps-3">
+                                <li>Full truckload (FTL) services</li>
+                                <li>Less than truckload (LTL) options</li>
+                                <li>Temperature-controlled transport</li>
+                                <li>Dedicated fleet operations</li>
                             </ul>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div>
-                                    <i class="fas fa-phone-volume text-green me-2"></i>
-                                    <small>Support: +91 9944111597</small>
-                                </div>
-                                <a href="https://maps.google.com" class="btn btn-sm btn-outline-green" target="_blank">
-                                    <i class="fas fa-directions me-1"></i> Directions
-                                </a>
-                            </div>
+                            <a href="#contact" class="btn btn-outline-green mt-3">Enquire Now</a>
                         </div>
                     </div>
                 </div>
                 
-                <!-- ATM Location 2 -->
-                <div class="col-md-6">
-                    <div class="card atm-location-card h-100 border-green">
-                        <div class="card-body">
-                            <h3 class="text-green">New Eddappadi Main Road,Sankari</h3>
-                            <p class="text-muted"><i class="fas fa-map-marker-alt text-green me-2"></i>Sankari,Salem</p>
-                            <div class="mb-3">
-                                <span class="badge bg-green text-white me-2">24/7 Access</span>
-                                <span class="badge bg-green text-white me-2">Cash Withdrawal</span>
-                                <span class="badge bg-green text-white">Mini Statements</span>
+                <div class="col-md-4">
+                    <div class="card transport-card h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="service-icon">
+                                <i class="fas fa-gas-pump"></i>
                             </div>
-                            <p>Our premium ATM serving the Financial District area with advanced features including:</p>
-                            <ul>
-                                <li>Contactless card support</li>
-                                <li>Higher cash withdrawal limits</li>
-                                <li>Multi-language interface</li>
-                                <li>Enhanced security monitoring</li>
+                            <h3 class="text-green">Fuel Transportation</h3>
+                            <p>Specialized transport for petroleum products</p>
+                            <ul class="text-start ps-3">
+                                <li>Diesel and petrol tankers</li>
+                                <li>LPG cylinder distribution</li>
+                                <li>Adherence to safety standards</li>
+                                <li>Regular maintenance fleet</li>
                             </ul>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div>
-                                    <i class="fas fa-phone-volume text-green me-2"></i>
-                                    <small>Support: +91 9944111597</small>
-                                </div>
-                                <a href="https://maps.google.com" class="btn btn-sm btn-outline-green" target="_blank">
-                                    <i class="fas fa-directions me-1"></i> Directions
-                                </a>
+                            <a href="#contact" class="btn btn-outline-green mt-3">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card transport-card h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="service-icon">
+                                <i class="fas fa-warehouse"></i>
                             </div>
+                            <h3 class="text-green">Warehousing & Distribution</h3>
+                            <p>Complete supply chain solutions</p>
+                            <ul class="text-start ps-3">
+                                <li>Secure storage facilities</li>
+                                <li>Inventory management</li>
+                                <li>Last-mile delivery</li>
+                                <li>Customs clearance support</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-outline-green mt-3">View Options</a>
                         </div>
                     </div>
                 </div>
@@ -481,146 +492,187 @@
         </div>
     </section>
 
-    <!-- ATM Features -->
+    <!-- Our Fleet -->
     <section class="py-5 bg-light-green">
         <div class="container">
             <div class="section-header text-center mb-5">
-                <h2 class="text-green">Our ATM Services</h2>
-                <p>Comprehensive financial solutions at your fingertips</p>
+                <h2 class="text-green">Our Transport Fleet</h2>
+                <p>Modern, well-maintained vehicles for all your logistics needs</p>
             </div>
             
             <div class="row g-4">
-                <div class="col-md-4 col-sm-6">
-                    <div class="text-center p-4">
-                        <div class="atm-feature-icon">
-                            <i class="fas fa-money-bill-wave"></i>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card transport-card h-100">
+                        <img src="../images/heavytruck.jpg" class="card-img-top fleet-image" alt="Heavy Truck">
+                        <div class="card-body text-center">
+                            <h4 class="text-green">Heavy Trucks</h4>
+                            <p>10T, 20T, and 30T capacity options</p>
+                            <span class="badge bg-green">Available: 15</span>
                         </div>
-                        <h4 class="text-green">Cash Withdrawal</h4>
-                        <p>Instant cash access with competitive withdrawal limits to meet your daily needs</p>
                     </div>
                 </div>
                 
-                <div class="col-md-4 col-sm-6">
-                    <div class="text-center p-4">
-                        <div class="atm-feature-icon">
-                            <i class="fas fa-file-invoice-dollar"></i>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card transport-card h-100">
+                        <img src="../images/oiltanker.jpg" class="card-img-top fleet-image" alt="Tanker Truck">
+                        <div class="card-body text-center">
+                            <h4 class="text-green">Tanker Trucks</h4>
+                            <p>12,000L to 35,000L capacity</p>
+                            <span class="badge bg-green">Available: 8</span>
                         </div>
-                        <h4 class="text-green">Balance Inquiry</h4>
-                        <p>Check your account balance anytime without visiting the bank</p>
                     </div>
                 </div>
                 
-                <div class="col-md-4 col-sm-6">
-                    <div class="text-center p-4">
-                        <div class="atm-feature-icon">
-                            <i class="fas fa-receipt"></i>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card transport-card h-100">
+                        <img src="../images/containertruck.jpg" class="card-img-top fleet-image" alt="Container Truck">
+                        <div class="card-body text-center">
+                            <h4 class="text-green">Container Trucks</h4>
+                            <p>20ft and 40ft container capacity</p>
+                            <span class="badge bg-green">Available: 12</span>
                         </div>
-                        <h4 class="text-green">Mini Statements</h4>
-                        <p>Get quick overview of your recent transactions at our Financial District location</p>
                     </div>
                 </div>
                 
-                <div class="col-md-4 col-sm-6">
-                    <div class="text-center p-4">
-                        <div class="atm-feature-icon">
-                            <i class="fas fa-fingerprint"></i>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card transport-card h-100">
+                        <img src="../images/deliverytruck.jpg" class="card-img-top fleet-image" alt="Delivery Van">
+                        <div class="card-body text-center">
+                            <h4 class="text-green">Delivery Vans</h4>
+                            <p>1T to 3T cargo capacity</p>
+                            <span class="badge bg-green">Available: 25</span>
                         </div>
-                        <h4 class="text-green">Biometric Access</h4>
-                        <p>Secure authentication using fingerprint technology at our Main Road location</p>
                     </div>
                 </div>
-                
-                <div class="col-md-4 col-sm-6">
-                    <div class="text-center p-4">
-                        <div class="atm-feature-icon">
-                            <i class="fas fa-mobile-alt"></i>
+            </div>
+            
+            <div class="text-center mt-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="bg-white p-4 rounded shadow-sm">
+                            <h4 class="text-green mb-3">Fleet Statistics</h4>
+                            <div class="row">
+                                <div class="col-6 col-md-3 mb-3 mb-md-0">
+                                    <h2 class="text-green">60+</h2>
+                                    <p>Vehicles</p>
+                                </div>
+                                <div class="col-6 col-md-3 mb-3 mb-md-0">
+                                    <h2 class="text-green">100%</h2>
+                                    <p>GPS Tracked</p>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <h2 class="text-green">24/7</h2>
+                                    <p>Support</p>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <h2 class="text-green">99%</h2>
+                                    <p>On-time Delivery</p>
+                                </div>
+                            </div>
                         </div>
-                        <h4 class="text-green">Contactless Transactions</h4>
-                        <p>Tap-and-go functionality for faster, more convenient transactions</p>
-                    </div>
-                </div>
-                
-                <div class="col-md-4 col-sm-6">
-                    <div class="text-center p-4">
-                        <div class="atm-feature-icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <h4 class="text-green">Advanced Security</h4>
-                        <p>24/7 surveillance and anti-skimming technology for your protection</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials -->
+    <!-- Coverage Area -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <h2 class="text-green">Our Coverage Network</h2>
+                <p>Serving across Maharashtra with expanding operations</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="../images/vehicle-road.jpg" alt="Coverage Area" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="text-green">Primary Service Areas</h3>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-map-marker-alt text-green me-2"></i> Mumbai</li>
+                                <li class="mb-2"><i class="fas fa-map-marker-alt text-green me-2"></i> Pune</li>
+                                <li class="mb-2"><i class="fas fa-map-marker-alt text-green me-2"></i> Nagpur</li>
+                                <li class="mb-2"><i class="fas fa-map-marker-alt text-green me-2"></i> Nashik</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-map-marker-alt text-green me-2"></i> Aurangabad</li>
+                                <li class="mb-2"><i class="fas fa-map-marker-alt text-green me-2"></i> Kolhapur</li>
+                                <li class="mb-2"><i class="fas fa-map-marker-alt text-green me-2"></i> Solapur</li>
+                                <li class="mb-2"><i class="fas fa-map-marker-alt text-green me-2"></i> Amravati</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <h4 class="text-green">Expanding to New Regions</h4>
+                        <p>We're continuously expanding our network to serve more locations across India. Contact us to inquire about service availability in your area.</p>
+                        <div class="alert alert-info">
+                            <i class="fas fa-info-circle me-2"></i> Special rates available for regular routes and bulk contracts.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
     <section class="py-5 bg-light">
         <div class="container">
             <div class="section-header text-center mb-5">
-                <h2 class="text-green">What People Say About Our ATMs</h2>
-                <p>Feedback from our valued users in Hitech City</p>
+                <h2 class="text-green">Why Choose Saakra Transport?</h2>
+                <p>We go the extra mile to ensure your goods arrive safely and on time</p>
             </div>
             
             <div class="row g-4">
-                <div class="col-md-4 col-sm-6">
-                    <div class="card h-100">
-                        <div class="card-body p-4">
-                            <div class="d-flex mb-3">
-                                <img src="../images/testimonials/user1.jpg" class="rounded-circle me-3" width="60" height="60" alt="Customer">
-                                <div>
-                                    <h5 class="mb-1">Rahul Sharma</h5>
-                                    <div class="text-warning">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <p>"The ATM near Cyber Towers is always operational and has the shortest queues. Very convenient for quick cash withdrawals during lunch breaks."</p>
+                <div class="col-md-6">
+                    <div class="d-flex">
+                        <div class="me-4 text-green">
+                            <i class="fas fa-shield-alt fa-2x"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-green">Safety First</h4>
+                            <p>Our drivers are highly trained and all vehicles undergo regular safety inspections. We maintain comprehensive insurance for all shipments.</p>
                         </div>
                     </div>
                 </div>
                 
-                <div class="col-md-4 col-sm-6">
-                    <div class="card h-100">
-                        <div class="card-body p-4">
-                            <div class="d-flex mb-3">
-                                <img src="../images/testimonials/user2.jpg" class="rounded-circle me-3" width="60" height="60" alt="Customer">
-                                <div>
-                                    <h5 class="mb-1">Priya Reddy</h5>
-                                    <div class="text-warning">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star-half-alt"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <p>"I use the Financial District ATM regularly. The biometric authentication makes it very secure and the interface is user-friendly."</p>
+                <div class="col-md-6">
+                    <div class="d-flex">
+                        <div class="me-4 text-green">
+                            <i class="fas fa-clock fa-2x"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-green">On-Time Guarantee</h4>
+                            <p>With our advanced route planning and real-time tracking, we guarantee timely deliveries with a 99% on-time delivery record.</p>
                         </div>
                     </div>
                 </div>
                 
-                <div class="col-md-4 col-sm-6 mx-auto">
-                    <div class="card h-100">
-                        <div class="card-body p-4">
-                            <div class="d-flex mb-3">
-                                <img src="../images/testimonials/user3.jpg" class="rounded-circle me-3" width="60" height="60" alt="Customer">
-                                <div>
-                                    <h5 class="mb-1">Arjun Kapoor</h5>
-                                    <div class="text-warning">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <p>"These ATMs are a lifesaver in Hitech City where banking options are limited. Never had any issues with transactions."</p>
+                <div class="col-md-6">
+                    <div class="d-flex">
+                        <div class="me-4 text-green">
+                            <i class="fas fa-rupee-sign fa-2x"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-green">Competitive Pricing</h4>
+                            <p>We offer transparent pricing with no hidden charges. Our volume discounts and regular customer benefits provide great value.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="d-flex">
+                        <div class="me-4 text-green">
+                            <i class="fas fa-headset fa-2x"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-green">24/7 Support</h4>
+                            <p>Our customer service team is available round the clock to handle your queries and provide shipment updates.</p>
                         </div>
                     </div>
                 </div>
@@ -633,11 +685,11 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-8 mb-3 mb-lg-0">
-                    <h2 class="mb-3">Have Questions About Our ATM Services?</h2>
-                    <p class="lead mb-lg-0">Contact us for more information about our existing ATMs or partnership opportunities.</p>
+                    <h2 class="mb-3">Ready to Ship With Us?</h2>
+                    <p class="lead mb-lg-0">Get a free quote for your transportation needs today.</p>
                 </div>
                 <div class="col-lg-4 text-lg-end">
-                    <a href="../contact.php" class="btn btn-light btn-lg">Contact Us</a>
+                    <a href="../contact.php" class="btn btn-light btn-lg">Get a Quote</a>
                 </div>
             </div>
         </div>
@@ -707,10 +759,11 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- AOS Animation -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- Custom JS -->
     <script src="../js/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <a id="backToTop" href="#" class="btn btn-green position-fixed bottom-0 end-0 m-3 rounded-circle" style="display: none; width: 50px; height: 50px; padding: 0; line-height: 50px;">↑</a>
     <script>
         // Initialize AOS (Animate On Scroll)
         AOS.init({
@@ -756,11 +809,11 @@
                 if (window.scrollY > 50) {
                     navbar.classList.add('scrolled');
                     document.querySelector('.company-name').style.fontSize = '1rem';
-                    if (logo) logo.style.height = '45px';
+                    logo.style.height = '45px';
                 } else {
                     navbar.classList.remove('scrolled');
                     document.querySelector('.company-name').style.fontSize = '1.2rem';
-                    if (logo) logo.style.height = '55px';
+                    logo.style.height = '55px';
                 }
             });
 
@@ -783,17 +836,13 @@
             dropdownItems.forEach(item => {
                 item.addEventListener('mouseenter', () => {
                     const iconCircle = item.querySelector('.service-icon-circle');
-                    if (iconCircle) {
-                        iconCircle.style.transform = 'scale(1.1)';
-                        iconCircle.style.backgroundColor = 'rgba(39, 226, 92, 0.2)';
-                    }
+                    iconCircle.style.transform = 'scale(1.1)';
+                    iconCircle.style.backgroundColor = 'rgba(39, 226, 92, 0.2)';
                 });
                 item.addEventListener('mouseleave', () => {
                     const iconCircle = item.querySelector('.service-icon-circle');
-                    if (iconCircle) {
-                        iconCircle.style.transform = 'scale(1)';
-                        iconCircle.style.backgroundColor = 'rgba(39, 226, 92, 0.1)';
-                    }
+                    iconCircle.style.transform = 'scale(1)';
+                    iconCircle.style.backgroundColor = 'rgba(39, 226, 92, 0.1)';
                 });
             });
 
@@ -801,7 +850,7 @@
             window.addEventListener('scroll', function() {
                 var backToTop = document.getElementById('backToTop');
                 if (window.pageYOffset > 300) {
-                    backToTop.style.display = 'flex';
+                    backToTop.style.display = 'block';
                 } else {
                     backToTop.style.display = 'none';
                 }
@@ -813,7 +862,5 @@
             });
         });
     </script>
-
-    <a id="backToTop" href="#" class="btn btn-green position-fixed bottom-0 end-0 m-3" style="display: none;">↑</a>
 </body>
 </html>

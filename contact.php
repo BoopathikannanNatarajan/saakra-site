@@ -14,9 +14,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <style>
         :root { 
-            --green: #27e25c; 
-            --dark-green: #1e7e34; 
-            --green-light: #d4edda; 
+            --primary-green: #00652d;
+      --secondary-green: #83b744;
+      --green-light: #e8f5e9;
             --animation-duration: 0.5s;
         }
         

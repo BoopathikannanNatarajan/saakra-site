@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Saakra Enterprises Pvt Ltd</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome (for icons) -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons (optional) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    :root {
+      --primary-green: #00652d;
+      --secondary-green: #83b744;
+      --green-light: #e8f5e9;
+      --neon-glow: #00ff41;
+    }
+
+    .navbar-custom {
+      background-color: var(--primary-green);
+      animation: fadeInDown 1s ease-in-out;
+    }
+
+    .navbar-custom .navbar-brand,
+    .navbar-custom .nav-link,
+    .navbar-custom .dropdown-toggle {
+      color: white;
+      transition: color 0.3s ease;
+    }
+
+    .navbar-custom .nav-link:hover,
+    .navbar-custom .dropdown-item:hover {
+      color: var(--secondary-green);
+    }
+
+    /* Enhanced Neon Logo Effects */
+    .logo-container {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .logo-neon {
+      height: 55px;
+      border: 2px solid white;
+      border-radius: 50%;
+      padding: 4px;
+      background-color: white;
+      position: relative;
+      z-index: 1;
+      /* Running animation */
+      animation: 
+        neonPulse 2s ease infinite alternate,
+        float 3s ease-in-out infinite;
+    }
+    
+    /* Floating effect */
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+    
+    /* Enhanced neon pulse */
+    @keyframes neonPulse {
+      0% {
+        box-shadow: 
+          0 0 5px var(--neon-glow),
+          0 0 10px var(--neon-glow),
+          0 0 15px var(--neon-glow);
+      }
+      100% {
+        box-shadow: 
+          0 0 10px var(--neon-glow),
+          0 0 20px var(--neon-glow),
+          0 0 30px var(--neon-glow);
+      }
+    }
+    
+    /* Hover effects override the animation */
+    .navbar-brand:hover .logo-neon {
+      animation: none;
+      transform: scale(1.1) translateY(-5px);
+      border-color: var(--neon-glow);
+      box-shadow: 
+        0 0 15px var(--neon-glow),
+        0 0 30px var(--neon-glow),
+        0 0 45px var(--neon-glow);
+    }
+
+    /* Rest of your existing styles... */
+    .dropdown-menu-creative {
+      background-color: var(--green-light);
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    .dropdown-menu-creative .dropdown-item {
+      color: #000;
+      transition: transform 0.2s ease, background-color 0.3s ease;
+    }
+
+    .dropdown-menu-creative .dropdown-item:hover {
+      background-color: var(--secondary-green);
+      color: white;
+      transform: translateX(5px);
+    }
+
+    .service-icon-circle {
+      width: 40px;
+      height: 40px;
+      background-color: #e9ecef;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service-icon-circle:hover {
+      transform: scale(1.1) rotate(10deg);
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .company-name {
+      font-weight: bold;
+      font-size: 1.25rem;
+      transition: transform 0.3s ease;
+    }
+    
+    .navbar-brand:hover .company-name {
+      transform: translateX(5px);
+    }
+
+    /* Animations */
+    @keyframes fadeInDown {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 991.98px) {
+      .navbar-nav .nav-link {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <div class="logo-container me-2">
+          <img src="./images/logo.png" alt="Saakra Enterprises" class="logo-neon">
+        </div>
+        <span class="company-name text-white">Saakra Enterprises Pvt Ltd</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active d-flex align-items-center" href="index.php">
+              <i class="fas fa-home me-2"></i>Home
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-th me-2"></i>Our Services
+            </a>
+            <ul class="dropdown-menu dropdown-menu-creative" aria-labelledby="servicesDropdown">
+              <li><a class="dropdown-item d-flex align-items-center" href="pages/oil-vendor.php">
+                <div class="service-icon-circle me-3">
+                  <i class="fas fa-gas-pump text-success"></i>
+                </div>
+                <div>
+                  <h6 class="mb-0">Indian Oil Vendor</h6>
+                  <small class="text-muted">Reliable fuel distribution</small>
+                </div>
+              </a></li>
+              <li><a class="dropdown-item d-flex align-items-center" href="pages/tyres-trading.php">
+                <div class="service-icon-circle me-3">
+                  <i class="bi bi-radioactive text-success"></i>
+                </div>
+                <div>
+                  <h6 class="mb-0">Tyres Trading</h6>
+                  <small class="text-muted">Premium quality tyres</small>
+                </div>
+              </a></li>
+              <li><a class="dropdown-item d-flex align-items-center" href="pages/transport.php">
+                <div class="service-icon-circle me-3">
+                  <i class="fas fa-truck text-success"></i>
+                </div>
+                <div>
+                  <h6 class="mb-0">Transport Services</h6>
+                  <small class="text-muted">Efficient logistics</small>
+                </div>
+              </a></li>
+              <li><a class="dropdown-item d-flex align-items-center" href="pages/atm-franchise.php">
+                <div class="service-icon-circle me-3">
+                  <i class="fas fa-money-bill-wave text-success"></i>
+                </div>
+                <div>
+                  <h6 class="mb-0">ATM Franchise</h6>
+                  <small class="text-muted">Secure cash solutions</small>
+                </div>
+              </a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item d-flex align-items-center" href="pages/ecommerce.php">
+                <div class="service-icon-circle me-3">
+                  <i class="fas fa-shopping-cart text-success"></i>
+                </div>
+                <div>
+                  <h6 class="mb-0">E-Commerce</h6>
+                  <small class="text-muted">Online selling solutions</small>
+                </div>
+                
+              </a></li>
+              <li><a class="dropdown-item d-flex align-items-center" href="pages/it-services.php">
+                <div class="service-icon-circle me-3">
+                  <i class="fas fa-laptop-code text-success"></i>
+                </div>
+                <div>
+                  <h6 class="mb-0">IT Services</h6>
+                  <small class="text-muted">Tech solutions</small>
+                </div>
+              </a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link d-flex align-items-center" href="about.php">
+              <i class="fas fa-info-circle me-2"></i>About Us
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link d-flex align-items-center" href="contact.php">
+              <i class="fas fa-phone-alt me-2"></i>Contact
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Bootstrap Bundle with Popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+
+</body>
+</html>
