@@ -45,86 +45,8 @@
             transform: translateY(-2px);
         }
         
-        /* Enhanced Header/Navbar Styles */
-        .navbar { 
-            padding: 15px 0;
-            transition: all 0.3s ease;
-            background-color: var(--dark-green);
-        }
-        .navbar.scrolled {
-            padding: 8px 0;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-            background-color: rgba(30, 126, 52, 0.95) !important;
-            backdrop-filter: blur(10px);
-        }
-        .company-name { 
-            font-weight: 600;
-            transition: all 0.3s ease;
-            margin-left: 10px;
-            font-size: 1.2rem;
-        }
-        .dropdown-menu-creative { 
-            padding: 15px; 
-            border: none; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-            animation: fadeIn var(--animation-duration) ease;
-            border-radius: 10px;
-            margin-top: 10px;
-        }
-        .service-icon-circle { 
-            width: 45px; 
-            height: 45px; 
-            border-radius: 50%; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center;
-            transition: all var(--animation-duration) ease;
-            background-color: rgba(39, 226, 92, 0.1);
-        }
-        .nav-link {
-            position: relative;
-            transition: all var(--animation-duration) ease;
-            padding: 8px 15px !important;
-            font-weight: 500;
-            margin: 0 5px;
-            border-radius: 5px;
-        }
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 3px;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: white;
-            transition: width var(--animation-duration) ease;
-        }
-        .nav-link:hover::after,
-        .nav-link.active::after {
-            width: calc(100% - 30px);
-        }
-        .dropdown-item {
-            transition: all var(--animation-duration) ease;
-            padding: 10px 15px;
-            border-radius: 5px;
-            margin: 3px 0;
-        }
-        .dropdown-item:hover {
-            transform: translateX(8px);
-            background-color: rgba(39, 226, 92, 0.1);
-        }
-        .navbar-brand img {
-            transition: all var(--animation-duration) ease;
-        }
-        .navbar-brand:hover img {
-            transform: rotate(5deg) scale(1.1);
-        }
+      
         
-        /* Header Spacing */
-        .header-space {
-            height: 80px; /* Adjust based on your navbar height */
-        }
         
         /* Animations */
         @keyframes fadeIn {
@@ -302,20 +224,6 @@
                 margin-bottom: 20px;
             }
         }
-        @media (max-width: 575.98px) {
-            .navbar-brand {
-                flex-direction: row;
-                align-items: center;
-            }
-            .company-name {
-                margin-top: 0;
-                margin-left: 10px;
-                font-size: 0.9rem;
-            }
-            .header-space {
-                height: 70px;
-            }
-        }
         @media (max-width: 991.98px) {
             .tech-logo {
                 max-height: 50px;
@@ -331,102 +239,11 @@
     </div>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark-green sticky-top slide-in-down">
-        <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="../index.html">
-                <img src="../images/logo.png" alt="Saakra Enterprises" height="55" class="me-2 border border-2 border-white rounded-circle p-1 bg-white pulse">
-                <span class="company-name text-white">Saakra Enterprises Pvt Ltd</span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link d-flex align-items-center fade-in delay-1" href="../index.php">
-                            <i class="fas fa-home me-2"></i>Home
-                        </a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link active dropdown-toggle d-flex align-items-center fade-in delay-2" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="fas fa-th me-2"></i>Our Services
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-creative" aria-labelledby="servicesDropdown">
-                            <li><a class="dropdown-item d-flex align-items-center" href="../pages/oil-vendor.php">
-                                <div class="service-icon-circle me-3">
-                                    <i class="fas fa-gas-pump text-green"></i>
-                                </div>
-                                <div>
-                                    <h6 class="mb-0">Indian Oil Vendor</h6>
-                                    <small class="text-muted">Reliable fuel distribution</small>
-                                </div>
-                            </a></li>
-                            <li><a class="dropdown-item d-flex align-items-center" href="tyres-trading.php">
-                                <div class="service-icon-circle me-3">
-                                    <i class="bi bi-radioactive text-green"></i>
-                                </div>
-                                <div>
-                                    <h6 class="mb-0">Tyres Trading</h6>
-                                    <small class="text-muted">Premium quality tyres</small>
-                                </div>
-                            </a></li>
-                            <li><a class="dropdown-item d-flex align-items-center" href="transport.php">
-                                <div class="service-icon-circle me-3">
-                                    <i class="fas fa-truck text-green"></i>
-                                </div>
-                                <div>
-                                    <h6 class="mb-0">Transport Services</h6>
-                                    <small class="text-muted">Efficient logistics</small>
-                                </div>
-                            </a></li>
-                            <li><a class="dropdown-item d-flex align-items-center" href="atm-franchise.php">
-                                <div class="service-icon-circle me-3">
-                                    <i class="fas fa-money-bill-wave text-green"></i>
-                                </div>
-                                <div>
-                                    <h6 class="mb-0">ATM Franchise</h6>
-                                    <small class="text-muted">Secure cash solutions</small>
-                                </div>
-                            </a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item d-flex align-items-center" href="ecommerce.php">
-                                <div class="service-icon-circle me-3">
-                                    <i class="fas fa-shopping-cart text-green"></i>
-                                </div>
-                                <div>
-                                    <h6 class="mb-0">E-Commerce</h6>
-                                    <small class="text-muted">Online selling solutions</small>
-                                </div>
-                            </a></li>
-                            <li><a class="dropdown-item d-flex align-items-center" href="it-services.php">
-                                <div class="service-icon-circle me-3">
-                                    <i class="fas fa-laptop-code text-green"></i>
-                                </div>
-                                <div>
-                                    <h6 class="mb-0">IT Services</h6>
-                                    <small class="text-muted">Tech solutions</small>
-                                </div>
-                            </a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link d-flex align-items-center fade-in delay-3" href="../about.php">
-                            <i class="fas fa-info-circle me-2"></i>About Us
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link d-flex align-items-center fade-in delay-4" href="../contact.php">
-                            <i class="fas fa-phone-alt me-2"></i>Contact
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <?php include "header.php"; ?>
     
 
     <!-- Page Header -->
-    <header class="page-header py-5">
+    <header class="page-header py-5 pt-5 mt-5">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
@@ -438,7 +255,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <img src="../images/it-services.jpg" alt="IT Services" class="img-fluid rounded shadow" style="width: 100%; max-width: 300px; transition: transform 0.5s, box-shadow 0.5s;" onmouseover="this.style.transform='rotateY(10deg) rotateX(10deg) scale(1.1)'; this.style.boxShadow='0 20px 30px rgba(0,0,0,0.2)';" onmouseout="this.style.transform='rotateY(0) rotateX(0) scale(1)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.1)';">
+                    <img src="./images/it-services.jpg" alt="IT Services" class="img-fluid rounded shadow" style="width: 100%; max-width: 300px; transition: transform 0.5s, box-shadow 0.5s;" onmouseover="this.style.transform='rotateY(10deg) rotateX(10deg) scale(1.1)'; this.style.boxShadow='0 20px 30px rgba(0,0,0,0.2)';" onmouseout="this.style.transform='rotateY(0) rotateX(0) scale(1)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.1)';">
                 </div>
             </div>
         </div>
@@ -563,21 +380,21 @@
             <div class="row text-center">
                 <div class="col">
                     <ul class="list-inline tech-list">
-                        <li class="list-inline-item m-3"><img src="../images/html5.webp" alt="HTML5" class="tech-logo" data-bs-toggle="tooltip" title="HTML5"></li>
-                        <li class="list-inline-item m-3"><img src="../images/css.png" alt="CSS3" class="tech-logo" data-bs-toggle="tooltip" title="CSS3"></li>
-                        <li class="list-inline-item m-3"><img src="../images/js.png" alt="JavaScript" class="tech-logo" data-bs-toggle="tooltip" title="JavaScript"></li>
-                        <li class="list-inline-item m-3"><img src="../images/react.png" alt="React" class="tech-logo" data-bs-toggle="tooltip" title="React"></li>
-                        <li class="list-inline-item m-3"><img src="../images/angular.png" alt="Angular" class="tech-logo" data-bs-toggle="tooltip" title="Angular"></li>
-                        <li class="list-inline-item m-3"><img src="../images/vue.png" alt="Vue" class="tech-logo" data-bs-toggle="tooltip" title="Vue.js"></li>
-                        <li class="list-inline-item m-3"><img src="../images/nodejs.png" alt="Node.js" class="tech-logo" data-bs-toggle="tooltip" title="Node.js"></li>
-                        <li class="list-inline-item m-3"><img src="../images/python.png" alt="Python" class="tech-logo" data-bs-toggle="tooltip" title="Python"></li>
-                        <li class="list-inline-item m-3"><img src="../images/java.webp" alt="Java" class="tech-logo" data-bs-toggle="tooltip" title="Java"></li>
-                        <li class="list-inline-item m-3"><img src="../images/php.jpeg" alt="PHP" class="tech-logo" data-bs-toggle="tooltip" title="PHP"></li>
-                        <li class="list-inline-item m-3"><img src="../images/mysql.png" alt="MySQL" class="tech-logo" data-bs-toggle="tooltip" title="MySQL"></li>
-                        <li class="list-inline-item m-3"><img src="../images/mang.png" alt="MongoDB" class="tech-logo" data-bs-toggle="tooltip" title="MongoDB"></li>
-                        <li class="list-inline-item m-3"><img src="../images/aws.png" alt="AWS" class="tech-logo" data-bs-toggle="tooltip" title="Amazon Web Services"></li>
-                        <li class="list-inline-item m-3"><img src="../images/azur.png" alt="Azure" class="tech-logo" data-bs-toggle="tooltip" title="Microsoft Azure"></li>
-                        <li class="list-inline-item m-3"><img src="../images/cloud.png" alt="Google Cloud" class="tech-logo" data-bs-toggle="tooltip" title="Google Cloud Platform"></li>
+                        <li class="list-inline-item m-3"><img src="./images/html5.webp" alt="HTML5" class="tech-logo" data-bs-toggle="tooltip" title="HTML5"></li>
+                        <li class="list-inline-item m-3"><img src="./images/css.png" alt="CSS3" class="tech-logo" data-bs-toggle="tooltip" title="CSS3"></li>
+                        <li class="list-inline-item m-3"><img src="./images/js.png" alt="JavaScript" class="tech-logo" data-bs-toggle="tooltip" title="JavaScript"></li>
+                        <li class="list-inline-item m-3"><img src="./images/react.png" alt="React" class="tech-logo" data-bs-toggle="tooltip" title="React"></li>
+                        <li class="list-inline-item m-3"><img src="./images/angular.png" alt="Angular" class="tech-logo" data-bs-toggle="tooltip" title="Angular"></li>
+                        <li class="list-inline-item m-3"><img src="./images/vue.png" alt="Vue" class="tech-logo" data-bs-toggle="tooltip" title="Vue.js"></li>
+                        <li class="list-inline-item m-3"><img src="./images/nodejs.png" alt="Node.js" class="tech-logo" data-bs-toggle="tooltip" title="Node.js"></li>
+                        <li class="list-inline-item m-3"><img src="./images/python.png" alt="Python" class="tech-logo" data-bs-toggle="tooltip" title="Python"></li>
+                        <li class="list-inline-item m-3"><img src="./images/java.webp" alt="Java" class="tech-logo" data-bs-toggle="tooltip" title="Java"></li>
+                        <li class="list-inline-item m-3"><img src="./images/php.jpeg" alt="PHP" class="tech-logo" data-bs-toggle="tooltip" title="PHP"></li>
+                        <li class="list-inline-item m-3"><img src="./images/mysql.png" alt="MySQL" class="tech-logo" data-bs-toggle="tooltip" title="MySQL"></li>
+                        <li class="list-inline-item m-3"><img src="./images/mang.png" alt="MongoDB" class="tech-logo" data-bs-toggle="tooltip" title="MongoDB"></li>
+                        <li class="list-inline-item m-3"><img src="./images/aws.png" alt="AWS" class="tech-logo" data-bs-toggle="tooltip" title="Amazon Web Services"></li>
+                        <li class="list-inline-item m-3"><img src="./images/azur.png" alt="Azure" class="tech-logo" data-bs-toggle="tooltip" title="Microsoft Azure"></li>
+                        <li class="list-inline-item m-3"><img src="./images/cloud.png" alt="Google Cloud" class="tech-logo" data-bs-toggle="tooltip" title="Google Cloud Platform"></li>
                     </ul>
                 </div>
             </div>
@@ -617,10 +434,10 @@
                                 <li class="mb-3"><i class="fas fa-check-circle text-green me-2"></i> Flexible working hours</li>
                                 <li><i class="fas fa-check-circle text-green me-2"></i> Long-term project opportunities</li>
                             </ul>
-                            <a href="../contact.html" class="btn btn-green">Apply as Freelancer</a>
+                            <a href="./contact.html" class="btn btn-green">Apply as Freelancer</a>
                         </div>
                         <div class="col-lg-6">
-                            <img src="../images/freelancerwork.jpg" alt="Freelance Work" class="img-fluid rounded shadow">
+                            <img src="./images/freelancerwork.jpg" alt="Freelance Work" class="img-fluid rounded shadow">
                         </div>
                     </div>
                 </div>
@@ -640,7 +457,7 @@
                             <a href="../contact.html" class="btn btn-green">View Open Positions</a>
                         </div>
                         <div class="col-lg-6">
-                            <img src="../images/full-time.jpg" alt="Full-Time Work" class="img-fluid rounded shadow">
+                            <img src="./images/full-time.jpg" alt="Full-Time Work" class="img-fluid rounded shadow">
                         </div>
                     </div>
                 </div>
@@ -660,7 +477,7 @@
                             <a href="../contact.html" class="btn btn-green">Apply for Part-Time</a>
                         </div>
                         <div class="col-lg-6">
-                            <img src="../images/part-time.jpg" alt="Part-Time Work" class="img-fluid rounded shadow">
+                            <img src="./images/part-time.jpg" alt="Part-Time Work" class="img-fluid rounded shadow">
                         </div>
                     </div>
                 </div>
@@ -796,7 +613,7 @@
                     <p class="lead mb-lg-0">Let our IT experts help you build the perfect digital solution.</p>
                 </div>
                 <div class="col-lg-4 text-lg-end">
-                    <a href="../contact.php" class="btn btn-light btn-lg">Get Started Today</a>
+                    <a href="./contact.php" class="btn btn-light btn-lg">Get Started Today</a>
                 </div>
             </div>
         </div>
@@ -808,7 +625,7 @@
             <div class="row">
                 <div class="col-lg-4 mb-4">
                     <div class="d-flex align-items-center mb-3">
-                        <img src="../images/logo-bg.png" alt="Saakra Enterprises" height="40" class="me-2">
+                        <img src="./images/logo-bg.png" alt="Saakra Enterprises" height="40" class="me-2">
                         <span class="company-name">Saakra Enterprises Pvt Ltd</span>
                     </div>
                     <p>Dream It. Design It. Deliver It.</p>
@@ -863,8 +680,6 @@
             </div>
         </div>
     </footer>
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- Custom JS -->

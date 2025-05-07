@@ -20,119 +20,7 @@
             --animation-duration: 0.5s;
         }
         
-        /* Navbar Styles */
-        .navbar { 
-            padding: 15px 0;
-            transition: all 0.3s ease;
-            background-color: var(--dark-green);
-        }
-        .navbar.scrolled {
-            padding: 8px 0;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-            background-color: rgba(18, 187, 57, 0.95) !important;
-            backdrop-filter: blur(10px);
-        }
-        .company-name { 
-            font-weight: 600;
-            transition: all 0.3s ease;
-            margin-left: 10px;
-            font-size: 1.2rem;
-            color: white;
-        }
-        .dropdown-menu-creative { 
-            padding: 15px; 
-            border: none; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-            border-radius: 10px;
-            margin-top: 10px;
-        }
-        .service-icon-circle { 
-            width: 45px; 
-            height: 45px; 
-            border-radius: 50%; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center;
-            transition: all var(--animation-duration) ease;
-            background-color: rgba(39, 226, 92, 0.1);
-        }
-        .nav-link {
-            position: relative;
-            transition: all var(--animation-duration) ease;
-            padding: 8px 15px !important;
-            font-weight: 500;
-            margin: 0 5px;
-            border-radius: 5px;
-            color: white !important;
-        }
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 3px;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: white;
-            transition: width var(--animation-duration) ease;
-        }
-        .nav-link:hover::after,
-        .nav-link.active::after {
-            width: calc(100% - 30px);
-        }
-        .dropdown-item {
-            transition: all var(--animation-duration) ease;
-            padding: 10px 15px;
-            border-radius: 5px;
-            margin: 3px 0;
-        }
-        .dropdown-item:hover {
-            transform: translateX(8px);
-            background-color: rgba(39, 226, 92, 0.1);
-        }
-        .navbar-brand img {
-            transition: all var(--animation-duration) ease;
-        }
-        .navbar-brand:hover img {
-            transform: rotate(5deg) scale(1.1);
-        }
-        .text-green { color: var(--green); }
-        
-        /* Responsive adjustments for navbar */
-        @media (max-width: 767.98px) {
-            .navbar-collapse { 
-                background: rgba(30, 126, 52, 0.95); 
-                padding: 15px; 
-                border-radius: 10px; 
-                margin-top: 15px;
-                backdrop-filter: blur(10px);
-            }
-            .company-name {
-                font-size: 1rem;
-            }
-            .navbar-brand img {
-                height: 45px;
-            }
-            .nav-link {
-                padding: 8px 0 !important;
-                margin: 5px 0;
-            }
-            .nav-link::after {
-                display: none;
-            }
-        }
-        @media (max-width: 575.98px) {
-            .navbar-brand {
-                flex-direction: row;
-                align-items: center;
-            }
-            .company-name {
-                margin-top: 0;
-                margin-left: 10px;
-                font-size: 0.9rem;
-            }
-        }
-        
+      
         /* Animation classes */
         .fade-in {
             animation: fadeIn 1s ease forwards;
@@ -228,16 +116,7 @@
         }
         
         /* Responsive adjustments */
-        @media (max-width: 992px) {
-            .navbar-brand .company-name {
-                font-size: 1.1rem;
-            }
-            
-            .contact-icon {
-                font-size: 1.8rem;
-            }
-        }
-        
+    
         @media (max-width: 768px) {
             .page-header {
                 padding: 2rem 0;
@@ -287,109 +166,15 @@
                 height: 250px;
             }
             
-            .navbar-brand img {
-                height: 50px;
-            }
         }
     </style>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark-green sticky-top">
-        <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="#">
-                <img src="./images/logo.png" alt="Saakra Enterprises" height="55" class="me-2 border border-2 border-white rounded-circle p-1 bg-white">
-                <span class="company-name">Saakra Enterprises Pvt Ltd</span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link d-flex align-items-center fade-in delay-1" href="index.php">
-                            <i class="fas fa-home me-2"></i>Home
-                        </a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle d-flex align-items-center fade-in delay-2" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="fas fa-th me-2"></i>Our Services
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-creative" aria-labelledby="servicesDropdown">
-                            <li><a class="dropdown-item d-flex align-items-center" href="pages/oil-vendor.php">
-                                <div class="service-icon-circle me-3">
-                                    <i class="fas fa-gas-pump text-green"></i>
-                                </div>
-                                <div>
-                                    <h6 class="mb-0">Indian Oil Vendor</h6>
-                                    <small class="text-muted">Reliable fuel distribution</small>
-                                </div>
-                            </a></li>
-                            <li><a class="dropdown-item d-flex align-items-center" href="pages/tyres-trading.php">
-                                <div class="service-icon-circle me-3">
-                                    <i class="bi bi-radioactive text-green"></i>
-                                </div>
-                                <div>
-                                    <h6 class="mb-0">Tyres Trading</h6>
-                                    <small class="text-muted">Premium quality tyres</small>
-                                </div>
-                            </a></li>
-                            <li><a class="dropdown-item d-flex align-items-center" href="pages/transport.php">
-                                <div class="service-icon-circle me-3">
-                                    <i class="fas fa-truck text-green"></i>
-                                </div>
-                                <div>
-                                    <h6 class="mb-0">Transport Services</h6>
-                                    <small class="text-muted">Efficient logistics</small>
-                                </div>
-                            </a></li>
-                            <li><a class="dropdown-item d-flex align-items-center" href="pages/atm-franchise.php">
-                                <div class="service-icon-circle me-3">
-                                    <i class="fas fa-money-bill-wave text-green"></i>
-                                </div>
-                                <div>
-                                    <h6 class="mb-0">ATM Franchise</h6>
-                                    <small class="text-muted">Secure cash solutions</small>
-                                </div>
-                            </a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item d-flex align-items-center" href="pages/ecommerce.php">
-                                <div class="service-icon-circle me-3">
-                                    <i class="fas fa-shopping-cart text-green"></i>
-                                </div>
-                                <div>
-                                    <h6 class="mb-0">E-Commerce</h6>
-                                    <small class="text-muted">Online selling solutions</small>
-                                </div>
-                            </a></li>
-                            <li><a class="dropdown-item d-flex align-items-center" href="pages/it-services.php">
-                                <div class="service-icon-circle me-3">
-                                    <i class="fas fa-laptop-code text-green"></i>
-                                </div>
-                                <div>
-                                    <h6 class="mb-0">IT Services</h6>
-                                    <small class="text-muted">Tech solutions</small>
-                                </div>
-                            </a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link d-flex align-items-center fade-in delay-3" href="about.php">
-                            <i class="fas fa-info-circle me-2"></i>About Us
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active d-flex align-items-center fade-in delay-4" href="contact.php">
-                            <i class="fas fa-phone-alt me-2"></i>Contact
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <?php include "header.php"; ?>
 
     <!-- Contact Form Section -->
-    <section class="py-5 bg-white" id="contact-form">
+    <section class="py-5 bg-white pt-5 mt-5" id="contact-form">
   <div class="container">
     <div class="section-header text-center mb-5">
       <h2 class="text-green">Get In Touch</h2>
@@ -667,7 +452,7 @@
             <div class="row">
                 <div class="col-lg-4 mb-4">
                     <div class="d-flex align-items-center mb-3">
-                        <img src="../images/logo-bg.png" alt="Saakra Enterprises" height="40" class="me-2">
+                        <img src="./images/logo-bg.png" alt="Saakra Enterprises" height="40" class="me-2">
                         <span class="company-name">Saakra Enterprises Pvt Ltd</span>
                     </div>
                     <p>Dream It. Design It. Deliver It.</p>
@@ -723,62 +508,9 @@
         </div>
     </footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+ 
     <script>
-        // Navbar scroll effect
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar');
-            const logo = document.querySelector('.navbar-brand img');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-                document.querySelector('.company-name').style.fontSize = '1rem';
-                if (logo) logo.style.height = '45px';
-            } else {
-                navbar.classList.remove('scrolled');
-                document.querySelector('.company-name').style.fontSize = '1.2rem';
-                if (logo) logo.style.height = '55px';
-            }
-        });
-
-        // Mobile menu close on click
-        const navbarToggler = document.querySelector('.navbar-toggler');
-        const navbarCollapse = document.querySelector('.navbar-collapse');
-        const navLinks = document.querySelectorAll('.nav-link');
-        
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                if (window.innerWidth < 992) {
-                    navbarCollapse.classList.remove('show');
-                }
-            });
-        });
-
-        // Add animation to navbar items after load
-        const navItems = document.querySelectorAll('.nav-item');
-        navItems.forEach((item, index) => {
-            item.style.animation = `fadeIn 0.5s ease forwards ${index * 0.1 + 0.5}s`;
-            item.style.opacity = '0';
-        });
-
-        // Hover effect for dropdown items
-        const dropdownItems = document.querySelectorAll('.dropdown-item');
-        dropdownItems.forEach(item => {
-            item.addEventListener('mouseenter', () => {
-                const iconCircle = item.querySelector('.service-icon-circle');
-                if (iconCircle) {
-                    iconCircle.style.transform = 'scale(1.1)';
-                    iconCircle.style.backgroundColor = 'rgba(39, 226, 92, 0.2)';
-                }
-            });
-            item.addEventListener('mouseleave', () => {
-                const iconCircle = item.querySelector('.service-icon-circle');
-                if (iconCircle) {
-                    iconCircle.style.transform = 'scale(1)';
-                    iconCircle.style.backgroundColor = 'rgba(39, 226, 92, 0.1)';
-                }
-            });
-        });
+      
 
         // Contact form validation
         // document.getElementById('contactForm').addEventListener('submit', function(e) {
