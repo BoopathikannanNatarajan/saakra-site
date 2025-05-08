@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-Commerce Services | Saakra Enterprises Pvt Ltd</title>
+    <link rel="icon" href="./images/logo-bg.png" type="image/png">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -21,27 +22,27 @@
             --dark-green: #00652d;
             --animation-duration: 0.5s;
         }
-        .text-green { color: var(--green); }
-        .bg-green { background-color: var(--green); }
-        .bg-dark-green { background-color: var(--dark-green); }
+        .text-green { color: var( --primary-green); }
+        .bg-green { background-color: var( --primary-green); }
+        .bg-dark-green { background-color: var( --primary-green); }
         .bg-green-light { background-color: var(--green-light); }
-        .btn-green { 
+        .btn.btn-green { 
             background-color: var(--green); 
             color: white;
             transition: all var(--animation-duration) ease;
         }
-        .btn-green:hover { 
+        .btn.btn-green:hover { 
             background-color: var(--dark-green); 
             color: white;
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
-        .btn-outline-green { 
+        .btn.btn-outline-green { 
             border-color: var(--green); 
             color: var(--green);
             transition: all var(--animation-duration) ease;
         }
-        .btn-outline-green:hover { 
+        .btn.btn-outline-green:hover { 
             background-color: var(--green); 
             color: white;
             transform: translateY(-2px);

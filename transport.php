@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transport Services | Saakra Enterprises Pvt Ltd</title>
+    <link rel="icon" href="./images/logo-bg.png" type="image/png">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -280,9 +281,6 @@
                     <div class="d-flex flex-wrap gap-2">
                         <a href="#our-services" class="btn btn-success px-4 py-2">
                             Explore Services
-                        </a>
-                        <a href="#contact" class="btn btn-outline-success px-4 py-2">
-                            Get Quote
                         </a>
                     </div>
                 </div>
@@ -591,7 +589,7 @@
                     <p class="lead mb-lg-0">Get a free quote for your transportation needs today.</p>
                 </div>
                 <div class="col-lg-4 text-lg-end">
-                    <a href="../contact.php" class="btn btn-light btn-lg">Get a Quote</a>
+                    <a href="contact.php" class="btn btn-light btn-lg">Get a Quote</a>
                 </div>
             </div>
         </div>
