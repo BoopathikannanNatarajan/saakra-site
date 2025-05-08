@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tyres Trading Services | Saakra Enterprises Pvt Ltd</title>
+    <link rel="icon" href="./images/logo-bg.png" type="image/png">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -287,6 +288,61 @@
 <body>
     <!-- Navigation -->
     <?php include "header.php"; ?>
+    <!-- Loading animation -->
+<div class="loader">
+    <div class="loader-circle"></div>
+    <div class="loader-text">Loading Saakra Enterprises</div>
+</div>
+
+<style>
+    .loader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--primary-green);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        transition: opacity 0.5s ease;
+    }
+    .loader-circle {
+        width: 60px;
+        height: 60px;
+        border: 5px solid rgba(255,255,255,0.2);
+        border-radius: 50%;
+        border-top-color: white;
+        animation: spin 1s linear infinite;
+    }
+    .loader-text {
+        color: white;
+        margin-top: 20px;
+        font-size: 1.2rem;
+        font-weight: 500;
+        animation: fadeInOut 1.5s ease infinite alternate;
+    }
+    @keyframes spin {
+        100% { transform: rotate(360deg); }
+    }
+    @keyframes fadeInOut {
+        0% { opacity: 0.5; }
+        100% { opacity: 1; }
+    }
+</style>
+
+<script>
+    // Loading animation
+    window.addEventListener('load', function() {
+        const loader = document.querySelector('.loader');
+        loader.style.opacity = '0';
+        setTimeout(() => {
+            loader.style.display = 'none';
+        }, 500);
+    });
+</script>
     
     <!-- Page Header -->
     <header class="page-header py-5 service-header pt-5 mt-5" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9f5e9 100%);">
@@ -320,7 +376,7 @@
                         <a href="#tyre-selector" class="btn btn-green btn-lg px-4">
                             <i class="fas fa-search me-2"></i>Find Your Tyres
                         </a>
-                        <a href="#contact" class="btn btn-outline-green btn-lg px-4 ms-2">
+                        <a href="contact.php" class="btn btn-outline-green btn-lg px-4 ms-2">
                             <i class="fas fa-headset me-2"></i>Expert Advice
                         </a>
                     </div>
@@ -658,8 +714,7 @@
         </div>
     </footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
     <!-- Custom JS -->
     <script src="../js/script.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

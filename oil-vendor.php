@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landscaping & Construction Services | Saakra Enterprises Pvt Ltd</title>
+    <link rel="icon" href="./images/logo-bg.png" type="image/png">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -14,14 +15,13 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
         :root { 
-    
-      --primary-green: #00652d;
-      --secondary-green: #83b744;
-      --green-light: #e8f5e9;
-      --neon-glow: #00ff41;
-      --animation-duration: 0.5s;
-    }
-            
+            --primary-green: #00652d;
+            --secondary-green: #83b744;
+            --green-light: #e8f5e9;
+            --neon-glow: #00ff41;
+            --animation-duration: 0.5s;
+        }
+        
         .text-green { color: var(--primary-green); }
         .bg-green { background-color: var(--primary-green); }
         .bg-dark-green { background-color: var(--primary-green); }
@@ -48,7 +48,6 @@
             transform: translateY(-2px);
         }
         
-      
         /* Animations */
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
@@ -189,7 +188,7 @@
         }
         
         /* Responsive adjustments */
-        @media (max-width: 767.98px) {
+        @media (max-width: 991.98px) {
             .navbar-collapse { 
                 background: rgba(30, 126, 52, 0.95); 
                 padding: 15px; 
@@ -213,7 +212,7 @@
             }
             .page-header {
                 text-align: center;
-                padding: 2rem 0;
+                padding: 2rem 1rem;
                 margin-top: 70px;
             }
             .page-header img {
@@ -230,7 +229,45 @@
                 margin-bottom: 10px;
                 margin-right: 0;
             }
+            .service-header h1 {
+                font-size: 1.8rem;
+            }
+            .page-header .lead {
+                font-size: 1.1rem;
+            }
+            .btn-lg {
+                padding: 0.5rem 1rem;
+                font-size: 1rem;
+            }
         }
+        
+        @media (max-width: 767.98px) {
+            .page-header {
+                padding: 1.5rem 1rem;
+            }
+            .service-header h1 {
+                font-size: 1.6rem;
+            }
+            .feature-box {
+                margin-bottom: 1rem;
+            }
+            .testimonial-card {
+                margin-bottom: 1rem;
+            }
+            .portfolio-item {
+                margin-bottom: 1rem;
+            }
+            .d-flex.flex-wrap {
+                justify-content: center;
+            }
+            .process-steps .step {
+                margin-bottom: 1rem;
+            }
+            .card-body {
+                padding: 1.25rem;
+            }
+        }
+        
         @media (max-width: 575.98px) {
             .navbar-brand {
                 flex-direction: row;
@@ -243,6 +280,63 @@
             }
             .header-space {
                 height: 70px;
+            }
+            .page-header {
+                margin-top: 60px;
+                padding: 1rem 0.5rem;
+            }
+            .service-header h1 {
+                font-size: 1.4rem;
+            }
+            .page-header .lead {
+                font-size: 1rem;
+            }
+            .btn-lg {
+                padding: 0.5rem;
+                font-size: 0.9rem;
+            }
+            .col-lg-4 .sticky-lg-top {
+                position: relative !important;
+                top: 0 !important;
+                margin-top: 2rem;
+            }
+            .portfolio-item img {
+                height: 200px !important;
+            }
+            .section-header h2 {
+                font-size: 1.5rem;
+            }
+            .footer .col-lg-4, .footer .col-lg-2 {
+                margin-bottom: 1.5rem;
+                text-align: center;
+            }
+            .footer .social-icons {
+                justify-content: center;
+            }
+            .footer ul.list-unstyled {
+                padding-left: 0;
+            }
+        }
+        
+        /* Extra small devices (phones, 360px and down) */
+        @media (max-width: 360px) {
+            .service-header h1 {
+                font-size: 1.3rem;
+            }
+            .btn-lg {
+                width: 100%;
+                margin-bottom: 0.5rem;
+            }
+            .d-flex.flex-wrap.gap-3 {
+                flex-direction: column;
+                gap: 0.5rem !important;
+            }
+            .d-flex.flex-wrap {
+                flex-direction: column;
+                align-items: center;
+            }
+            .pe-4 {
+                padding-right: 0 !important;
             }
         }
     </style>
@@ -257,71 +351,66 @@
     <!-- Navigation -->
     <?php include "header.php"; ?>
 
-
-
     <!-- Page Header -->
-<header class="page-header py-5 service-header pt-5 mt-5" style="background: linear-gradient(to right, #f8f9fa 0%, #e8f5e9 100%);">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6">
-                <h1 class="text-green display-4 fw-bold mb-3">Professional Landscaping & Construction</h1>
-                <p class="lead fs-4 mb-4">Transforming ordinary spaces into extraordinary environments with premium landscaping and construction solutions</p>
-                
-                <div class="d-flex flex-wrap mb-4">
-                    <div class="pe-4 mb-3">
-                        <div class="d-flex align-items-center">
-                            <i class="fas fa-check-circle text-green me-2"></i>
-                            <span class="fw-medium">12+ Years Experience</span>
+    <header class="page-header py-5 service-header pt-5 mt-5" style="background: linear-gradient(to right, #f8f9fa 0%, #e8f5e9 100%);">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-lg-1 order-2">
+                    <h1 class="text-green display-4 fw-bold mb-3">Professional Landscaping & Construction</h1>
+                    <p class="lead fs-4 mb-4">Transforming ordinary spaces into extraordinary environments with premium landscaping and construction solutions</p>
+                    
+                    <div class="d-flex flex-wrap mb-4 justify-content-center justify-content-lg-start">
+                        <div class="pe-4 mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-check-circle text-green me-2"></i>
+                                <span class="fw-medium">12+ Years Experience</span>
+                            </div>
+                        </div>
+                        <div class="pe-4 mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-check-circle text-green me-2"></i>
+                                <span class="fw-medium">Licensed & Insured</span>
+                            </div>
+                        </div>
+                        <div class="pe-4 mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-check-circle text-green me-2"></i>
+                                <span class="fw-medium">Free Consultations</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="pe-4 mb-3">
-                        <div class="d-flex align-items-center">
-                            <i class="fas fa-check-circle text-green me-2"></i>
-                            <span class="fw-medium">Licensed & Insured</span>
-                        </div>
-                    </div>
-                    <div class="pe-4 mb-3">
-                        <div class="d-flex align-items-center">
-                            <i class="fas fa-check-circle text-green me-2"></i>
-                            <span class="fw-medium">Free Consultations</span>
-                        </div>
+                    
+                    <div class="d-flex flex-wrap gap-3 mt-3 justify-content-center justify-content-lg-start">
+                        <a href="contact.php" class="btn btn-green btn-lg px-4">
+                            <i class="fas fa-file-signature me-2"></i>Request Quote
+                        </a>
                     </div>
                 </div>
-                
-                <div class="d-flex flex-wrap gap-3 mt-3">
-                    <a href="#quote" class="btn btn-green btn-lg px-4">
-                        <i class="fas fa-file-signature me-2"></i>Request Quote
-                    </a>
-                    <a href="#services" class="btn btn-outline-green btn-lg px-4">
-                        <i class="fas fa-clipboard-list me-2"></i>Our Services
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-6 text-lg-end text-center mt-lg-0 mt-4 position-relative">
-                <img src="./images/vendor-hero.jpg" alt="Landscaping Services" class="img-fluid hover-scale rounded-3 shadow" style="max-width: 500px; height: auto; transform: perspective(1000px) rotateY(-10deg); transition: all 0.3s ease;">
-                <div class="position-absolute bg-success text-white p-2 rounded-pill shadow-sm d-flex align-items-center" style="bottom: 20px; left: 20px; transform: rotate(-5deg);">
-                   
+                <div class="col-lg-6 order-lg-2 order-1 text-lg-end text-center mt-lg-0 mt-4 position-relative mb-4 mb-lg-0">
+                    <img src="./images/vendor-hero.jpg" alt="Landscaping Services" class="img-fluid hover-scale rounded-3 shadow" style="max-width: 350px; height: auto; transform: perspective(1000px) rotateY(-10deg); transition: all 0.3s ease;">
+                    <div class="position-absolute bg-success text-white p-2 rounded-pill shadow-sm d-flex align-items-center" style="bottom: 20px; left: 20px; transform: rotate(-5deg);">
+                        <!-- Optional badge content -->
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <script>
-        document.querySelector('.hover-scale').addEventListener('mouseover', function() {
-            this.style.transform = 'perspective(1000px) rotateY(10deg) scale(1.03)';
-            this.style.boxShadow = '0 10px 20px rgba(0,0,0,0.1)';
-        });
-        document.querySelector('.hover-scale').addEventListener('mouseout', function() {
-            this.style.transform = 'perspective(1000px) rotateY(-10deg) scale(1)';
-            this.style.boxShadow = '0 5px 15px rgba(0,0,0,0.05)';
-        });
-    </script>
-</header>
+        <script>
+            document.querySelector('.hover-scale').addEventListener('mouseover', function() {
+                this.style.transform = 'perspective(1000px) rotateY(10deg) scale(1.03)';
+                this.style.boxShadow = '0 10px 20px rgba(0,0,0,0.1)';
+            });
+            document.querySelector('.hover-scale').addEventListener('mouseout', function() {
+                this.style.transform = 'perspective(1000px) rotateY(-10deg) scale(1)';
+                this.style.boxShadow = '0 5px 15px rgba(0,0,0,0.05)';
+            });
+        </script>
+    </header>
 
     <!-- Service Details -->
     <section class="py-5 bg-white">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8">
+                <div class="col-lg-8 order-lg-1 order-2">
                     <h2 class="text-green mb-4">Comprehensive Landscaping & Construction Services</h2>
                     <p class="lead">We specialize in creating beautiful outdoor spaces and quality construction projects with attention to detail and craftsmanship.</p>
                     
@@ -441,7 +530,7 @@
                     </div>
                 </div>
                 
-                <div class="col-lg-4">
+                <div class="col-lg-4 order-lg-2 order-1">
                     <div class="card border-green sticky-lg-top mb-4" style="top: 20px;">
                         <div class="card-body p-4">
                             <h4 class="text-green mb-4" id="quote">Request Service Quote</h4>
@@ -603,7 +692,6 @@
                                 <p>Saakra transformed our backyard into a beautiful oasis. Their attention to detail and creative design exceeded our expectations.</p>
                             </div>
                             <div class="d-flex align-items-center">
-                              
                                 <div>
                                     <h6 class="mb-0 text-green">Muruga ananthan</h6>
                                     <small class="text-muted">Homeowner</small>
@@ -621,7 +709,6 @@
                                 <p>The construction team built our office extension on time and within budget. Professional work from start to finish.</p>
                             </div>
                             <div class="d-flex align-items-center">
-                            
                                 <div>
                                     <h6 class="mb-0 text-green">PR Groups</h6>
                                     <small class="text-muted">Business Owner</small>
@@ -639,7 +726,6 @@
                                 <p>Their landscape lighting design has completely changed how we enjoy our garden at night. Highly recommend their services!</p>
                             </div>
                             <div class="d-flex align-items-center">
-                    
                                 <div>
                                     <h6 class="mb-0 text-green">Arun Mehta</h6>
                                     <small class="text-muted">Residential Client</small>
@@ -708,73 +794,72 @@
             <h2>Ready to Transform Your Space?</h2>
             <p class="lead mb-4">Contact our team today to discuss your landscaping or construction project.</p>
             <div class="d-flex justify-content-center gap-3 flex-wrap">
-                <a href="../contact.php" class="btn btn-light btn-lg">Contact Us</a>
-               
+                <a href="contact.php" class="btn btn-light btn-lg">Contact Us</a>
             </div>
         </div>
     </section>
 
-   <!-- Footer -->
-   <footer class="py-5 bg-dark text-white">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4 mb-4">
-                <div class="d-flex align-items-center mb-3">
-                    <img src="./images/logo-bg.png" alt="Saakra Enterprises" height="40" class="me-2">
-                    <span class="company-name">Saakra Enterprises Pvt Ltd</span>
+    <!-- Footer -->
+    <footer class="py-5 bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="./images/logo-bg.png" alt="Saakra Enterprises" height="40" class="me-2">
+                        <span class="company-name">Saakra Enterprises Pvt Ltd</span>
+                    </div>
+                    <p>Dream It. Design It. Deliver It.</p>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                    </div>
                 </div>
-                <p>Dream It. Design It. Deliver It.</p>
-                <div class="social-icons">
-                    <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="text-white me-3"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="text-green">Services</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="oil-vendor.php" class="text-white">Indian Oil Vendor</a></li>
+                        <li><a href="tyres-trading.php" class="text-white">Tyres Trading</a></li>
+                        <li><a href="atm-franchise.php" class="text-white">ATM Franchise</a></li>
+                        <li><a href="transport.php" class="text-white">Transport</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="text-green">Digital Services</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="ecommerce.php" class="text-white">E-Commerce</a></li>
+                        <li><a href="it-services.php" class="text-white">IT Services</a></li>
+                        <li><a href="it-services.php" class="text-white">Web Development</a></li>
+                        <li><a href="it-services.php" class="text-white">Digital Marketing</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5 class="text-green">Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-map-marker-alt me-2 text-green"></i> Salem, Tamilnadu, India</li>
+                        <li><i class="fas fa-phone me-2 text-green"></i> +91 99 44 111 597</li>
+                        <li><i class="fas fa-envelope me-2 text-green"></i> saakraenterprisespvtltd.com</li>
+                    </ul>
                 </div>
             </div>
-            <div class="col-lg-2 col-md-6 mb-4">
-                <h5 class="text-green">Services</h5>
-                <ul class="list-unstyled">
-                    <li><a href="oil-vendor.php" class="text-white">Indian Oil Vendor</a></li>
-                    <li><a href="tyres-trading.php" class="text-white">Tyres Trading</a></li>
-                    <li><a href="atm-franchise.php" class="text-white">ATM Franchise</a></li>
-                    <li><a href="transport.php" class="text-white">Transport</a></li>
-                </ul>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="small mb-0">&copy; 2025 Saakra Enterprises Pvt Ltd. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="small mb-0">
+                        <a href="#" class="text-white">Privacy Policy</a> | 
+                        <a href="#" class="text-white">Terms of Service</a>
+                    </p>
+                </div>
             </div>
-            <div class="col-lg-2 col-md-6 mb-4">
-                <h5 class="text-green">Digital Services</h5>
-                <ul class="list-unstyled">
-                    <li><a href="ecommerce.php" class="text-white">E-Commerce</a></li>
-                    <li><a href="it-services.php" class="text-white">IT Services</a></li>
-                    <li><a href="it-services.php" class="text-white">Web Development</a></li>
-                    <li><a href="it-services.php" class="text-white">Digital Marketing</a></li>
-                </ul>
-            </div>
-            <div class="col-lg-4 mb-4">
-                <h5 class="text-green">Contact Us</h5>
-                <ul class="list-unstyled">
-                    <li><i class="fas fa-map-marker-alt me-2 text-green"></i> Salem, Tamilnadu, India</li>
-                    <li><i class="fas fa-phone me-2 text-green"></i> +91 99 44 111 597</li>
-                    <li><i class="fas fa-envelope me-2 text-green"></i> saakraenterprisespvtltd.com</li>
-                </ul>
+            <div class="text-center mt-3">
+                <p class="small mb-0"><strong>Designed by the Saakra IT Team</strong></p>
             </div>
         </div>
-        <hr class="my-4">
-        <div class="row">
-            <div class="col-md-6 text-center text-md-start">
-                <p class="small mb-0">&copy; 2025 Saakra Enterprises Pvt Ltd. All rights reserved.</p>
-            </div>
-            <div class="col-md-6 text-center text-md-end">
-                <p class="small mb-0">
-                    <a href="#" class="text-white">Privacy Policy</a> | 
-                    <a href="#" class="text-white">Terms of Service</a>
-                </p>
-            </div>
-        </div>
-        <div class="text-start mt-3">
-            <p class="small mb-0"><strong>Designed by the Saakra IT Team</strong></p>
-        </div>
-    </div>
-</footer>
+    </footer>
 
     <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
