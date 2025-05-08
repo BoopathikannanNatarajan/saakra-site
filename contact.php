@@ -38,7 +38,7 @@
         /* Contact Cards */
         .contact-card {
             transition: transform 0.3s;
-            border: 1px solid #28a745;
+            border: 1px solid var(--primary-green);
             border-radius: 10px;
             overflow: hidden;
             margin-bottom: 20px;
@@ -73,7 +73,7 @@
         }
         
         .form-control:focus {
-            border-color: #28a745;
+            border-color:var(--primary-green);
             box-shadow: 0 0 0 0.25rem rgba(40, 167, 69, 0.25);
         }
         
@@ -89,30 +89,35 @@
         }
         
         .bg-dark-green {
-            background-color:  #1e7e34;
+            background-color: var(--primary-green);
         }
         
         .bg-light-green {
             background-color: #e8f5e9;
         }
         
-        .btn-green {
-            background-color: #28a745;
+        .btn.btn-green {
+            background-color: var(--primary-green);
             color: white;
         }
-        
-        .btn-outline-green {
-            border-color: #28a745;
-            color: #28a745;
+        .btn.btn-green:hover { 
+            background-color: var(--secondary-green); 
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .btn.btn-outline-green {
+            border-color:var(--primary-green);
+            color:var(--primary-green);
         }
         
-        .btn-outline-green:hover {
-            background-color: #28a745;
+        .btn.btn-outline-green:hover {
+            background-color:var(--primary-green);
             color: white;
         }
         
         .text-green {
-            color: #28a745;
+            color:var(--primary-green) ;
         }
         
         /* Responsive adjustments */
@@ -401,19 +406,11 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="py-5 bg-green text-white">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-8">
-                    <h2 class="mb-3">Have an Urgent Inquiry?</h2>
-                    <p class="lead mb-3 mb-md-0">Our customer support team is standing by to assist you with immediate needs.</p>
-                </div>
-                <div class="col-md-4 text-md-end">
-                    <a href="tel:+919876543210" class="btn btn-light btn-lg">
-                        <i class="fas fa-phone-alt me-2"></i> Call Now
-                    </a>
-                </div>
-            </div>
+    <section class="py-5 bg-dark-green text-white">
+        <div class="container text-center">
+            <h2>Want to Know More About Us?</h2>
+            <p class="lead mb-4">Our team is ready to answer your questions and discuss how we can work together.</p>
+            <a href="contact.php" class="btn btn-light btn-lg">Contact Us</a>
         </div>
     </section>
 

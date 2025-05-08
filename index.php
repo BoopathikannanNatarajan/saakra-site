@@ -27,23 +27,23 @@
         .bg-green { background-color: var(--primary-green); }
         .bg-secondary-green { background-color: var(--secondary-green); }
         .bg-green-light { background-color: var(--green-light); }
-        .btn-green { 
+        .btn.btn-green { 
             background-color: var(--primary-green); 
             color: white;
             transition: all var(--animation-duration) ease;
         }
-        .btn-green:hover { 
+        .btn.btn-green:hover { 
             background-color: var(--secondary-green); 
             color: white;
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
-        .btn-outline-green { 
+        .btn.btn-outline-green { 
             border-color: var(--primary-green); 
             color: var(--primary-green);
             transition: all var(--animation-duration) ease;
         }
-        .btn-outline-green:hover { 
+        .btn.btn-outline-green:hover { 
             background-color: var(--primary-green); 
             color: white;
             transform: translateY(-2px);
@@ -556,7 +556,7 @@
     <section class="hero-section  pt-5 mt-5">
         <div class="shape shape-1"></div>
         <div class="shape shape-2"></div>
-        <div class="container">
+        <div class="container py-5">
             <div class="row align-items-center">
                 <div class="col-lg-6 order-lg-1 order-2">
                     <div class="hero-content">

@@ -19,28 +19,28 @@
       --green-light: #e8f5e9; 
             --animation-duration: 0.5s;
         }
-        .text-green { color: var(--green); }
-        .bg-green { background-color: var(--green); }
-        .bg-dark-green { background-color: var(--dark-green); }
+        .text-green { color: var(--primary-green); }
+        .bg-green { background-color: var(--primary-green); }
+        .bg-dark-green { background-color: var(--primary-green); }
         .bg-green-light { background-color: var(--green-light); }
-        .btn-green { 
-            background-color: var(--green); 
+        .btn.btn-green { 
+            background-color: var(--primary-green); 
             color: white;
             transition: all var(--animation-duration) ease;
         }
-        .btn-green:hover { 
-            background-color: var(--dark-green); 
+        .btn.btn-green:hover { 
+            background-color: var(--primary-green); 
             color: white;
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
-        .btn-outline-green { 
-            border-color: var(--green); 
-            color: var(--green);
+        .btn.btn-outline-green { 
+            border-color: var(--primary-green); 
+            color: var(--primary-green);
             transition: all var(--animation-duration) ease;
         }
-        .btn-outline-green:hover { 
-            background-color: var(--green); 
+        .btn.btn-outline-green:hover { 
+            background-color: var(--primary-green); 
             color: white;
             transform: translateY(-2px);
         }
@@ -113,7 +113,7 @@
         /* IT Services specific styles */
         .tech-card {
             transition: transform 0.3s;
-            border: 1px solid #28a745;
+            border: 1px solid var(--primary-green);
         }
         .tech-card:hover {
             transform: translateY(-5px);
@@ -121,7 +121,7 @@
         }
         .tech-icon {
             font-size: 2.5rem;
-            color: #28a745;
+            color: var(--primary-green);
             margin-bottom: 1rem;
         }
         .tech-image {

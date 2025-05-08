@@ -90,28 +90,28 @@
             background-color: #1e7e34;
         }
         .text-green {
-            color: var(--green);
+            color: var(--primary-green);
         }
         .bg-green-light {
             background-color: #d5f5e3;
         }
-        .btn-green {
+        .btn.btn-green {
             background-color: var(--green);
             color: white;
             transition: all var(--animation-duration) ease;
         }
-        .btn-green:hover { 
+        .btn.btn-green:hover { 
             background-color: var(--dark-green); 
             color: white;
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
-        .btn-outline-green { 
+        .btn.btn-outline-green { 
             border-color: var(--green); 
             color: var(--green);
             transition: all var(--animation-duration) ease;
         }
-        .btn-outline-green:hover { 
+        .btn.btn-outline-green:hover { 
             background-color: var(--green); 
             color: white;
             transform: translateY(-2px);
@@ -236,14 +236,34 @@
             left: -12px;
         }
         
-        /* Back to Top Button */
-        #backToTop {
-            border-radius: 50%;
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
             width: 50px;
             height: 50px;
+            border-radius: 50%;
+            background: var(--primary-green);
+            color: white;
             display: flex;
             align-items: center;
             justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            background: var(--secondary-green);
+            transform: translateY(-3px);
         }
         
         /* Responsive Adjustments */
@@ -533,7 +553,7 @@
             
             <div class="timeline">
                 <div class="timeline-item left">
-                    <div class="timeline-year"><b>2021</b></div>
+                    <div class="timeline-year"><b>2016</b></div>
                     <div class="timeline-content">
                         <h5 class="text-green">Company Founded</h5>
                         <p>Saakra Enterprises established as an Indian Oil vendor in Sankari,Salem.Serving local businesses with fuel distribution services.</p>
@@ -541,7 +561,7 @@
                 </div>
                 
                 <div class="timeline-item right">
-                    <div class="timeline-year"><b>2021</b></div>
+                    <div class="timeline-year"><b>2022</b></div>
                     <div class="timeline-content">
                         <h5 class="text-green">Tyres Trading Division</h5>
                         <p>Expanded into tyre trading, providing quality tyres to transport and logistics companies.</p>
@@ -654,8 +674,9 @@
     </div>
 </footer>
     <!-- Back to Top Button -->
-    <a id="backToTop" href="#" class="btn btn-green position-fixed bottom-0 end-0 m-3" style="display: none;"><i class="fas fa-arrow-up"></i></a>
-
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
 
     <!-- AOS Animation -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -678,17 +699,18 @@
             
         
 
-            // Back to top button
+           // Back to top button
+           const backToTopButton = document.getElementById('backToTop');
+            
             window.addEventListener('scroll', function() {
-                var backToTop = document.getElementById('backToTop');
                 if (window.pageYOffset > 300) {
-                    backToTop.style.display = 'flex';
+                    backToTopButton.classList.add('active');
                 } else {
-                    backToTop.style.display = 'none';
+                    backToTopButton.classList.remove('active');
                 }
             });
             
-            document.getElementById('backToTop').addEventListener('click', function(e) {
+            backToTopButton.addEventListener('click', function(e) {
                 e.preventDefault();
                 window.scrollTo({top: 0, behavior: 'smooth'});
             });

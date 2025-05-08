@@ -18,28 +18,28 @@
       --green-light: #e8f5e9;
             --animation-duration: 0.5s;
         }
-        .text-green { color: var(--green); }
-        .bg-green { background-color: var(--green); }
-        .bg-dark-green { background-color: var(--dark-green); }
+        .text-green { color: var(--primary-green); }
+        .bg-green { background-color: var(--primary-green); }
+        .bg-dark-green { background-color: var(--primary-green); }
         .bg-green-light { background-color: var(--green-light); }
-        .btn-green { 
-            background-color: var(--green); 
+        .btn.btn-green { 
+            background-color: var(--primary-green); 
             color: white;
             transition: all var(--animation-duration) ease;
         }
-        .btn-green:hover { 
-            background-color: var(--dark-green); 
+        .btn.btn-green:hover { 
+            background-color: var(--primary-green); 
             color: white;
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
-        .btn-outline-green { 
-            border-color: var(--green); 
-            color: var(--green);
+        .btn.btn-outline-green { 
+            border-color: var(--primary-green); 
+            color: var(--primary-green);
             transition: all var(--animation-duration) ease;
         }
-        .btn-outline-green:hover { 
-            background-color: var(--green); 
+        .btn.btn-outline-green:hover { 
+            background-color: var(--primary-green); 
             color: white;
             transform: translateY(-2px);
         }
@@ -111,7 +111,7 @@
         /* Transport Page Specific Styles */
         .transport-card {
             transition: transform 0.3s;
-            border: 1px solid #28a745;
+            border: 1px solid var(--primary-green);
             margin-bottom: 20px;
         }
         .transport-card:hover {
@@ -120,7 +120,7 @@
         }
         .service-icon {
             font-size: 2.5rem;
-            color: #28a745;
+            color: var(--primary-green);
             margin-bottom: 1rem;
         }
         .fleet-image {
@@ -132,16 +132,16 @@
             background-color: #1a472a;
         }
         .bg-green {
-            background-color: #28a745;
+            background-color: var(--primary-green);
         }
         .bg-light-green {
             background-color: #e8f5e9;
         }
         .text-green {
-            color: #28a745;
+            color: var(--primary-green);
         }
         .btn-green {
-            background-color: #28a745;
+            background-color: var(--primary-green);
             color: white;
         }
         .btn-outline-green {
@@ -242,19 +242,91 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
-                    <h1 class="text-green">Transport Services</h1>
-                    <p class="lead">Reliable and efficient logistics solutions for your business needs</p>
-                    <a href="#our-services" class="btn btn-green btn-lg mt-3">Explore Services</a>
+                    <h1 class="text-success mb-3">Transport Services</h1>
+                    <p class="lead mb-4">Reliable logistics solutions tailored to your business requirements.</p>
+                    
+                    <div class="service-features mb-4">
+                        <div class="d-flex mb-3">
+                            <div class="me-3 text-success">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-1">Comprehensive Coverage</h5>
+                                <p class="text-muted mb-0">Serving all major cities with dedicated transport routes</p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex mb-3">
+                            <div class="me-3 text-success">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-1">Flexible Fleet</h5>
+                                <p class="text-muted mb-0">Vehicles for all cargo types and sizes</p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex mb-4">
+                            <div class="me-3 text-success">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-1">Live Tracking</h5>
+                                <p class="text-muted mb-0">Real-time shipment monitoring</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex flex-wrap gap-2">
+                        <a href="#our-services" class="btn btn-success px-4 py-2">
+                            Explore Services
+                        </a>
+                        <a href="#contact" class="btn btn-outline-success px-4 py-2">
+                            Get Quote
+                        </a>
+                    </div>
                 </div>
-                <div class="col-lg-6">
-                    <img src="./images/transport-hero1.png" alt="Transport Services" class="img-fluid rounded shadow" style="width: 80%; transform: perspective(1000px) rotateY(15deg);">
+                
+                <div class="col-lg-6 mt-4 mt-lg-0">
+                    <div class="text-center">
+                        <img src="./images/transport-hero1.png" alt="Transport Services" 
+                            class="img-fluid rounded" style="width: 70%; max-width: 400px;">
+                    </div>
                 </div>
             </div>
         </div>
     </header>
-
-    <!-- Our Services -->
-    <section class="py-5 bg-white" id="our-services">
+    
+    <style>
+        .page-header {
+            background-color: #f8f9fa;
+        }
+        
+        .service-features h5 {
+            font-size: 1rem;
+            color: #343a40;
+        }
+        
+        .btn-success {
+            background-color: var(--primary-green);
+            border-color:var(--primary-green);
+            font-weight: 500;
+        }
+        
+        .btn-outline-success {
+            color: var(--primary-green);
+            border-color: var(--primary-green);
+            font-weight: 500;
+        }
+        
+        @media (max-width: 768px) {
+            .col-lg-6.text-center img {
+                width: 60% !important;
+            }
+        }
+    </style>
+<!-- Our Services -->
+<section class="py-5 bg-white" id="our-services">
         <div class="container">
             <div class="section-header text-center mb-5">
                 <h2 class="text-green">Our Transport Solutions</h2>

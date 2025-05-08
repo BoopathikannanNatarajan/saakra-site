@@ -22,28 +22,28 @@
       --animation-duration: 0.5s;
     }
             
-        .text-green { color: var(--green); }
-        .bg-green { background-color: var(--green); }
-        .bg-dark-green { background-color: var(--dark-green); }
+        .text-green { color: var(--primary-green); }
+        .bg-green { background-color: var(--primary-green); }
+        .bg-dark-green { background-color: var(--primary-green); }
         .bg-green-light { background-color: var(--green-light); }
-        .btn-green { 
-            background-color: var(--green); 
+        .btn.btn-green { 
+            background-color: var(--primary-green); 
             color: white;
             transition: all var(--animation-duration) ease;
         }
-        .btn-green:hover { 
-            background-color: var(--dark-green); 
+        .btn.btn-green:hover { 
+            background-color: var(--primary-green); 
             color: white;
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
-        .btn-outline-green { 
-            border-color: var(--green); 
-            color: var(--green);
+        .btn.btn-outline-green { 
+            border-color: var(--primary-green); 
+            color: var(--primary-green);
             transition: all var(--animation-duration) ease;
         }
-        .btn-outline-green:hover { 
-            background-color: var(--green); 
+        .btn.btn-outline-green:hover { 
+            background-color: var(--primary-green); 
             color: rgb(255, 255, 255);
             transform: translateY(-2px);
         }
@@ -260,28 +260,62 @@
 
 
     <!-- Page Header -->
-    <header class="page-header py-5 service-header pt-5 mt-5">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <h1 class="text-green"> Professional Landscaping & Construction</h1>
-                    <p class="lead">Transforming spaces with quality landscaping and construction services</p>
-                    <a href="#quote" class="btn btn-green btn-lg mt-3">Request Quote</a>
+<header class="page-header py-5 service-header pt-5 mt-5" style="background: linear-gradient(to right, #f8f9fa 0%, #e8f5e9 100%);">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1 class="text-green display-4 fw-bold mb-3">Professional Landscaping & Construction</h1>
+                <p class="lead fs-4 mb-4">Transforming ordinary spaces into extraordinary environments with premium landscaping and construction solutions</p>
+                
+                <div class="d-flex flex-wrap mb-4">
+                    <div class="pe-4 mb-3">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-check-circle text-green me-2"></i>
+                            <span class="fw-medium">12+ Years Experience</span>
+                        </div>
+                    </div>
+                    <div class="pe-4 mb-3">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-check-circle text-green me-2"></i>
+                            <span class="fw-medium">Licensed & Insured</span>
+                        </div>
+                    </div>
+                    <div class="pe-4 mb-3">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-check-circle text-green me-2"></i>
+                            <span class="fw-medium">Free Consultations</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-lg-6 text-lg-end text-center mt-lg-0 mt-4">
-                    <img src="./images/vendor-hero.jpg" alt="Landscaping Services" class="img-fluid hover-scale" style="max-width: 400px; height: auto; transform: perspective(1000px) rotateY(0deg); transition: transform 0.5s;">
+                
+                <div class="d-flex flex-wrap gap-3 mt-3">
+                    <a href="#quote" class="btn btn-green btn-lg px-4">
+                        <i class="fas fa-file-signature me-2"></i>Request Quote
+                    </a>
+                    <a href="#services" class="btn btn-outline-green btn-lg px-4">
+                        <i class="fas fa-clipboard-list me-2"></i>Our Services
+                    </a>
                 </div>
-                <script>
-                    document.querySelector('.hover-scale').addEventListener('mouseover', function() {
-                        this.style.transform = 'perspective(1000px) rotateY(20deg)';
-                    });
-                    document.querySelector('.hover-scale').addEventListener('mouseout', function() {
-                        this.style.transform = 'perspective(1000px) rotateY(0deg)';
-                    });
-                </script>
+            </div>
+            <div class="col-lg-6 text-lg-end text-center mt-lg-0 mt-4 position-relative">
+                <img src="./images/vendor-hero.jpg" alt="Landscaping Services" class="img-fluid hover-scale rounded-3 shadow" style="max-width: 500px; height: auto; transform: perspective(1000px) rotateY(-10deg); transition: all 0.3s ease;">
+                <div class="position-absolute bg-success text-white p-2 rounded-pill shadow-sm d-flex align-items-center" style="bottom: 20px; left: 20px; transform: rotate(-5deg);">
+                   
+                </div>
             </div>
         </div>
-    </header>
+    </div>
+    <script>
+        document.querySelector('.hover-scale').addEventListener('mouseover', function() {
+            this.style.transform = 'perspective(1000px) rotateY(10deg) scale(1.03)';
+            this.style.boxShadow = '0 10px 20px rgba(0,0,0,0.1)';
+        });
+        document.querySelector('.hover-scale').addEventListener('mouseout', function() {
+            this.style.transform = 'perspective(1000px) rotateY(-10deg) scale(1)';
+            this.style.boxShadow = '0 5px 15px rgba(0,0,0,0.05)';
+        });
+    </script>
+</header>
 
     <!-- Service Details -->
     <section class="py-5 bg-white">

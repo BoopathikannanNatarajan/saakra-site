@@ -24,8 +24,8 @@ require 'PHPMailer/SMTP.php';
 require 'PHPMailer/Exception.php';
 
 // Gmail credentials
-$gmailUsername = 'ecomsaakraagency@gmail.com';
-$gmailAppPassword = 'mfse yhrw qrpr ysqc';  // App password
+$gmailUsername = 'saakraenterprisespvtltd@gmail.com';
+$gmailAppPassword = 'ogue posx ngmu sshj';  // App password
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Log POST data
@@ -53,7 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Recipients
         $mail->setFrom($gmailUsername, 'Website Contact Form');
-        $mail->addAddress('ecomsaakraagency@gmail.com'); // Where you want to receive mail
+        $mail->addAddress('saakraenterprisespvtltd@gmail.com'); // Where you want to receive mail
 
         // Content
         $mail->isHTML(true);

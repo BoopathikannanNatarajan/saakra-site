@@ -14,9 +14,11 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
         :root { 
-            --primary-green: #00652d;
-      --secondary-green: #83b744;
-      --green-light: #e8f5e9; 
+            --primary-green: #00652d; 
+            --secondary-green: #83b744; 
+            --green-light: #e8f5e9; 
+            --green: #0f5820;
+            --dark-green: #00652d;
             --animation-duration: 0.5s;
         }
         .text-green { color: var(--green); }
@@ -44,7 +46,6 @@
             color: white;
             transform: translateY(-2px);
         }
-        
         
         /* Animations */
         @keyframes fadeIn {
@@ -111,7 +112,7 @@
         /* E-commerce specific styles */
         .ecom-card {
             transition: transform 0.3s;
-            border: 1px solid #28a745;
+            border: 1px solid var(--green);
             margin-bottom: 20px;
         }
         .ecom-card:hover {
@@ -120,7 +121,7 @@
         }
         .service-icon {
             font-size: 2.5rem;
-            color: #28a745;
+            color: var(--green);
             margin-bottom: 1rem;
         }
         .platform-image {
@@ -153,14 +154,13 @@
             background-color: rgba(40, 167, 69, 0.1);
         }
         .bg-light-green {
-            background-color: #e8f5e9;
+            background-color: var(--green-light);
         }
         .btn-outline-green:hover {
-            background-color: #28a745;
+            background-color: var(--green);
             color: white;
         }
 
-      
         @media (max-width: 575.98px) {
             .navbar-brand {
                 flex-direction: row;
@@ -205,7 +205,6 @@
 
     <!-- Navigation -->
     <?php include "header.php"; ?>
-
 
     <!-- Page Header -->
     <header class="page-header pt-5 mt-5">
@@ -257,21 +256,20 @@
                         </div>
                     </div>
                 </div>
-                                <div class="col-md-6 col-lg-3">
-                                    <div class="card ecom-card h-100">
-                                        <div class="card-body text-center p-4">
-                                            <img src="./images/meesho.png" alt="Meesho" class="platform-logo mb-4">
-                                            <h4 class="text-green">Meesho Reseller</h4>
-                                            <p>We supply products to Meesho resellers with competitive pricing and reliable fulfillment.</p>
-                                            <ul class="text-start">
-                                                <li><i class="fas fa-check-circle text-green me-2"></i> Zero investment selling</li>
-                                                <li><i class="fas fa-check-circle text-green me-2"></i> Pan-India delivery network</li>
-                                                <li><i class="fas fa-check-circle text-green me-2"></i> Social commerce focus</li>
-                                            </ul>
-                                          
-                                        </div>
-                                    </div>
-                                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card ecom-card h-100">
+                        <div class="card-body text-center p-4">
+                            <img src="./images/meesho.png" alt="Meesho" class="platform-logo mb-4">
+                            <h4 class="text-green">Meesho Reseller</h4>
+                            <p>We supply products to Meesho resellers with competitive pricing and reliable fulfillment.</p>
+                            <ul class="text-start">
+                                <li><i class="fas fa-check-circle text-green me-2"></i> Zero investment selling</li>
+                                <li><i class="fas fa-check-circle text-green me-2"></i> Pan-India delivery network</li>
+                                <li><i class="fas fa-check-circle text-green me-2"></i> Social commerce focus</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
                 <div class="col-md-6 col-lg-3">
                     <div class="card ecom-card h-100">
                         <div class="card-body text-center p-4">
@@ -283,7 +281,6 @@
                                 <li><i class="fas fa-check-circle text-green me-2"></i> Sponsored product ads</li>
                                 <li><i class="fas fa-check-circle text-green me-2"></i> Brand registry support</li>
                             </ul>
-                           
                         </div>
                     </div>
                 </div>
@@ -299,12 +296,9 @@
                                 <li><i class="fas fa-check-circle text-green me-2"></i> SuperCoins rewards</li>
                                 <li><i class="fas fa-check-circle text-green me-2"></i> Big Billion Day participation</li>
                             </ul>
-                          
                         </div>
                     </div>
                 </div>
-                
-                
             </div>
         </div>
     </section>
@@ -510,8 +504,8 @@
         </div>
     </section>
 
-       <!-- Footer -->
-       <footer class="py-5 bg-dark text-white">
+    <!-- Footer -->
+    <footer class="py-5 bg-dark text-white">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 mb-4">
@@ -572,7 +566,6 @@
         </div>
     </footer>
 
-  
     <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- Custom JS -->
@@ -593,14 +586,22 @@
             setTimeout(() => {
                 loader.style.display = 'none';
             }, 500);
-            
         });
 
-    
+        // Back to top button
+        window.addEventListener('scroll', function() {
+            const backToTop = document.getElementById('backToTop');
+            if (window.pageYOffset > 300) {
+                backToTop.style.display = 'block';
+            } else {
+                backToTop.style.display = 'none';
+            }
+        });
 
-
-            
-        
+        document.getElementById('backToTop').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        });
     </script>
 
     <a id="backToTop" href="#" class="btn btn-green position-fixed bottom-0 end-0 m-3" style="display: none;">↑</a>

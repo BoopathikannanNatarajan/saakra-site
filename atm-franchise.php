@@ -29,7 +29,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: var(--dark-green);
+            background-color: var(--primary-green);
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -91,7 +91,7 @@
         }
         .atm-feature-icon {
             font-size: 2rem;
-            color: var(--green);
+            color: var(--primary-green);
             margin-bottom: 1rem;
         }
         /* Hero section image size adjustment */
@@ -102,35 +102,35 @@
         }
         
         .border-green {
-            border: 1px solid var(--green);
+            border: 1px solid var(  --primary-green);
         }
         .bg-green {
-            background-color: var(--green);
+            background-color: var( --primary-green);
         }
         .bg-light-green {
-            background-color: var(--green-light);
+            background-color: var( --green-light);
         }
         .text-green {
-            color: var(--green);
+            color: var(--primary-green);
         }
-        .btn-green { 
-            background-color: var(--green); 
+        .btn.btn-green { 
+            background-color: var(--primary-green); 
             color: white;
             transition: all var(--animation-duration) ease;
         }
-        .btn-green:hover { 
-            background-color: var(--dark-green); 
+        .btn.btn-green:hover { 
+            background-color: var(--primary-green); 
             color: white;
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
-        .btn-outline-green { 
-            border-color: var(--green); 
-            color: var(--green);
+        .btn.btn-outline-green { 
+            border-color: var(--primary-green); 
+            color: var(--primary-green);
             transition: all var(--animation-duration) ease;
         }
-        .btn-outline-green:hover { 
-            background-color: var(--green); 
+        .btn.btn-outline-green:hover { 
+            background-color: var(--primary-green); 
             color: white;
             transform: translateY(-2px);
         }
@@ -143,7 +143,7 @@
             transition: color 0.3s;
         }
         footer a:hover {
-            color: var(--green) !important;
+            color: var(--green-light) !important;
         }
         .social-icons a {
             display: inline-block;
@@ -157,7 +157,7 @@
             transition: background-color 0.3s;
         }
         .social-icons a:hover {
-            background-color: var(--green);
+            background-color: var(--primary-green);
         }
     </style>
 </head>
