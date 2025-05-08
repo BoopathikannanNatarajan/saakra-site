@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saakra Enterprises Pvt Ltd | Dream It. Design It. Deliver It.</title>
+    <link rel="icon" href="./images/logo-bg.png" type="image/png">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -574,7 +575,7 @@
                             <a href="#services" class="btn btn-green btn-lg me-3 mb-3 mb-md-0">
                                 <i class="fas fa-th me-2"></i> Our Services
                             </a>
-                            <a href="contact.html" class="btn btn-outline-green btn-lg">
+                            <a href="contact.php" class="btn btn-outline-green btn-lg">
                                 <i class="fas fa-phone-alt me-2"></i> Contact Us
                             </a>
                         </div>
@@ -756,7 +757,7 @@
             </div>
             
             <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="300">
-                <a href="#contact" class="btn btn-green btn-lg">
+                <a href="contact.php" class="btn btn-green btn-lg">
                     <i class="fas fa-envelope me-2"></i> Get a Free Consultation
                 </a>
             </div>
@@ -804,9 +805,7 @@
                             </div>
                         </div>
                         
-                        <div data-aos="fade-up" data-aos-delay="400">
-                            <a href="about.html" class="btn btn-green mt-3">Read More About Us</a>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -832,13 +831,13 @@
                         <div class="card-body">
                             <div class="d-flex mb-3">
                                 <i class="fas fa-quote-left text-green me-3"></i>
-                                <p>Saakra Enterprises has been our reliable oil vendor for over 5 years. Their service is impeccable and deliveries are always on time.</p>
+                                <p>Saakra Enterprises has been our own business entity for over 5 years. Their service is impeccable and deliveries are always on time.</p>
                             </div>
                             <div class="d-flex align-items-center">
-                                <img src="../images/clients/client1.jpg" alt="Client" class="rounded-circle me-3" width="50">
+                            
                                 <div>
-                                    <h6 class="mb-0 text-green">Rajesh Sharma</h6>
-                                    <small class="text-muted">Transport Company Owner</small>
+                                    <h6 class="mb-0 text-green">Vijay</h6>
+                                    <small class="text-muted">NK Transport</small>
                                     <div class="rating mt-1">
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
@@ -860,9 +859,9 @@
                                 <p>The IT team at Saakra transformed our online presence. Our e-commerce sales have increased by 200% since they redesigned our website.</p>
                             </div>
                             <div class="d-flex align-items-center">
-                                <img src="../images/clients/client2.jpg" alt="Client" class="rounded-circle me-3" width="50">
+                               
                                 <div>
-                                    <h6 class="mb-0 text-green">Priya Patel</h6>
+                                    <h6 class="mb-0 text-green">Thrisha</h6>
                                     <small class="text-muted">Fashion Retailer</small>
                                     <div class="rating mt-1">
                                         <i class="fas fa-star"></i>
@@ -885,9 +884,9 @@
                                 <p>Their tyre trading division provided us with high-quality products at competitive prices. Excellent customer service and after-sales support.</p>
                             </div>
                             <div class="d-flex align-items-center">
-                                <img src="../images/clients/client3.jpg" alt="Client" class="rounded-circle me-3" width="50">
+                            
                                 <div>
-                                    <h6 class="mb-0 text-green">Vikram Singh</h6>
+                                    <h6 class="mb-0 text-green">Deepika</h6>
                                     <small class="text-muted">Fleet Manager</small>
                                     <div class="rating mt-1">
                                         <i class="fas fa-star"></i>
@@ -916,10 +915,10 @@
                 <i class="fas fa-handshake me-2"></i> Contact us today to discuss how we can help you achieve your business goals.
             </p>
             <div data-aos="fade-up" data-aos-delay="200">
-                <a href="contact.html" class="btn btn-light btn-lg me-3 mb-3 mb-md-0">
+                <a href="contact.php" class="btn btn-light btn-lg me-3 mb-3 mb-md-0">
                     <i class="fas fa-paper-plane me-2"></i> Get Started
                 </a>
-                <a href="tel:+919876543210" class="btn btn-outline-light btn-lg">
+                <a href="tel:+919944111597" class="btn btn-outline-light btn-lg">
                     <i class="fas fa-phone-alt me-2"></i> Call Now
                 </a>
             </div>

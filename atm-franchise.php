@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ATM Franchise Services in Hitech City | Saakra Enterprises Pvt Ltd</title>
+    <link rel="icon" href="./images/logo-bg.png" type="image/png">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -398,7 +399,7 @@
                     <p class="lead mb-lg-0">Contact us for more information about our existing ATMs or partnership opportunities.</p>
                 </div>
                 <div class="col-lg-4 text-lg-end">
-                    <a href="../contact.php" class="btn btn-light btn-lg">Contact Us</a>
+                    <a href="contact.php" class="btn btn-light btn-lg">Contact Us</a>
                 </div>
             </div>
         </div>

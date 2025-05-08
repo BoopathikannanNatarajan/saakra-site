@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IT Services | Saakra Enterprises Pvt Ltd</title>
+    <link rel="icon" href="./images/logo-bg.png" type="image/png">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -434,7 +435,7 @@
                                 <li class="mb-3"><i class="fas fa-check-circle text-green me-2"></i> Flexible working hours</li>
                                 <li><i class="fas fa-check-circle text-green me-2"></i> Long-term project opportunities</li>
                             </ul>
-                            <a href="./contact.html" class="btn btn-green">Apply as Freelancer</a>
+                            <a href="contact.php" class="btn btn-green">Apply as Freelancer</a>
                         </div>
                         <div class="col-lg-6">
                             <img src="./images/freelancerwork.jpg" alt="Freelance Work" class="img-fluid rounded shadow">
@@ -454,7 +455,7 @@
                                 <li class="mb-3"><i class="fas fa-check-circle text-green me-2"></i> Flexible work arrangements</li>
                                 <li><i class="fas fa-check-circle text-green me-2"></i> Performance bonuses</li>
                             </ul>
-                            <a href="../contact.html" class="btn btn-green">View Open Positions</a>
+                            <a href="contact.php" class="btn btn-green">View Open Positions</a>
                         </div>
                         <div class="col-lg-6">
                             <img src="./images/full-time.jpg" alt="Full-Time Work" class="img-fluid rounded shadow">
@@ -474,7 +475,7 @@
                                 <li class="mb-3"><i class="fas fa-check-circle text-green me-2"></i> Potential to transition to full-time</li>
                                 <li><i class="fas fa-check-circle text-green me-2"></i> Supportive team environment</li>
                             </ul>
-                            <a href="../contact.html" class="btn btn-green">Apply for Part-Time</a>
+                            <a href="contact.php" class="btn btn-green">Apply for Part-Time</a>
                         </div>
                         <div class="col-lg-6">
                             <img src="./images/part-time.jpg" alt="Part-Time Work" class="img-fluid rounded shadow">
@@ -506,7 +507,7 @@
                                 <li><i class="fas fa-check-circle text-green me-2"></i> Strong JavaScript/TypeScript</li>
                                 <li><i class="fas fa-check-circle text-green me-2"></i> CSS preprocessors</li>
                             </ul>
-                            <a href="../contact.html" class="btn btn-outline-green w-100">Apply Now</a>
+                            <a href="contact.php" class="btn btn-outline-green w-100">Apply Now</a>
                         </div>
                     </div>
                 </div>
@@ -523,7 +524,7 @@
                                 <li><i class="fas fa-check-circle text-green me-2"></i> Figma/Sketch expertise</li>
                                 <li><i class="fas fa-check-circle text-green me-2"></i> 6-month project</li>
                             </ul>
-                            <a href="../contact.html" class="btn btn-outline-green w-100">Apply Now</a>
+                            <a href="contact.php" class="btn btn-outline-green w-100">Apply Now</a>
                         </div>
                     </div>
                 </div>
@@ -540,7 +541,7 @@
                                 <li><i class="fas fa-check-circle text-green me-2"></i> REST API design</li>
                                 <li><i class="fas fa-check-circle text-green me-2"></i> 20 hrs/week</li>
                             </ul>
-                            <a href="../contact.html" class="btn btn-outline-green w-100">Apply Now</a>
+                            <a href="contact.php" class="btn btn-outline-green w-100">Apply Now</a>
                         </div>
                     </div>
                 </div>
@@ -557,7 +558,7 @@
                                 <li><i class="fas fa-check-circle text-green me-2"></i> Kubernetes/Docker</li>
                                 <li><i class="fas fa-check-circle text-green me-2"></i> Terraform/Ansible</li>
                             </ul>
-                            <a href="../contact.html" class="btn btn-outline-green w-100">Apply Now</a>
+                            <a href="contact.php" class="btn btn-outline-green w-100">Apply Now</a>
                         </div>
                     </div>
                 </div>
@@ -574,7 +575,7 @@
                                 <li><i class="fas fa-check-circle text-green me-2"></i> Clear writing samples</li>
                                 <li><i class="fas fa-check-circle text-green me-2"></i> Markdown/AsciiDoc</li>
                             </ul>
-                            <a href="../contact.html" class="btn btn-outline-green w-100">Apply Now</a>
+                            <a href="contact.php" class="btn btn-outline-green w-100">Apply Now</a>
                         </div>
                     </div>
                 </div>
@@ -591,7 +592,7 @@
                                 <li><i class="fas fa-check-circle text-green me-2"></i> Bug tracking systems</li>
                                 <li><i class="fas fa-check-circle text-green me-2"></i> 15-25 hrs/week</li>
                             </ul>
-                            <a href="../contact.html" class="btn btn-outline-green w-100">Apply Now</a>
+                            <a href="contact.php" class="btn btn-outline-green w-100">Apply Now</a>
                         </div>
                     </div>
                 </div>
@@ -599,7 +600,7 @@
             
             <div class="text-center mt-5">
                 <p class="lead">Don't see your perfect role? We're always looking for talented people.</p>
-                <a href="../contact.html" class="btn btn-green btn-lg">Send Us Your Resume</a>
+                <a href="contact.php" class="btn btn-green btn-lg">Send Us Your Resume</a>
             </div>
         </div>
     </section>
@@ -613,7 +614,7 @@
                     <p class="lead mb-lg-0">Let our IT experts help you build the perfect digital solution.</p>
                 </div>
                 <div class="col-lg-4 text-lg-end">
-                    <a href="./contact.php" class="btn btn-light btn-lg">Get Started Today</a>
+                    <a href="contact.php" class="btn btn-light btn-lg">Get Started Today</a>
                 </div>
             </div>
         </div>
